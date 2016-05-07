@@ -2,8 +2,9 @@
 title: Shadowfacts
 email: me@shadowfacts.net
 description: Just my various ramblings (The outer part of a shadow is called the penumbra!)
-baseurl: ""
-url: "https://shadowfacts.net"
+baseurl: 
+url: https://shadowfacts.net
+enforce_ssl: shadowfacts.net
 twitter_username: ShadowfactsDev
 github_username:  shadowfacts
 
