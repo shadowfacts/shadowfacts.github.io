@@ -1,0 +1,15 @@
+---
+layout: page
+title: Tutorials
+permalink: /tutorials/
+---
+
+<ul class="post-list">
+	{% for series in site.series %}
+		<li>
+			<h2>
+				<a class="post-link" href="{{ series.url | prepend: site.baseurl }}">{{ series.title }}</a>
+			</h2>
+		</li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,21 @@
+# Site settings
+title: Shadowfacts
+email: me@shadowfacts.net
+description: Just my various ramblings (The outer part of a shadow is called the penumbra!)
+baseurl: ""
+url: "https://shadowfacts.net"
+twitter_username: ShadowfactsDev
+github_username:  shadowfacts
+
+# Build settings
+markdown: kramdown
+
+permalink: /:categories/:year/:month/:day/:title/
+
+collections:
+  series:
+    permalink: /tutorials/:path/
+    output: true
+  tutorials:
+    permalink: /tutorials/:path/
+    output: true

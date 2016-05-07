@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="post">
+	<h1 class="post-title">{{ page.title }}</h1>
+
+	<article class="post-content">
+		<ul class="post-list">
+			{% for tutorial in site.tutorials %}
+				{% if tutorial.series == page.series-name %}
+					<span class="post-meta">{{ tutorial.date | date: "%b %-d, %Y" }}</span>
+					<li>
+						<a href="{{ tutorial.url | prepend: site.baseurl }}" class="post-link">{{ tutorial.title }}</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</article>
+</div>
