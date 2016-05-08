@@ -10,40 +10,43 @@ layout: tutorial
 ### About
 This series of tutorials teaches modding [Minecraft](https://minecraft.net) version 1.9 using [Forge](http://minecraftforge.net).
 
+**This tutorial series does not teach Java. You should already know Java before you try to mod Minecraft.**
+
 ### Tutorials
-<ul>
-	<li><a href="/tutorials/forge-modding-19/workspace-setup/">Setting up the Development Environment</a>
-	</li>
-	<li><a href="/tutorials/forge-modding-19/main-mod-class/">Main Mod Class</a></li>
-	<li><a href="/tutorials/forge-modding-19/proxy-system/">Proxy System</a></li>
-	<li><a href="/tutorials/forge-modding-19/basic-items/">Basic Items</a></li>
-	<li><a href="/tutorials/forge-modding-19/json-item-models/">JSON Item Models</a></li>
-	<li><a href="/tutorials/forge-modding-19/basic-blocks/">Basic Blocks</a></li>
-	<li><a href="/tutorials/forge-modding-19/basic-forge-blockstates/">Basic Forge Blockstates</a></li>
-	<li>JSON Block Models</li>
-	<li>Crops</li>
-	<li>Localization</li>
-	<li>Creative Tabs</li>
-	<li>Crafting/Furnace Recipes</li>
-	<li>Ore Dictionary</li>
-	<li>Food</li>
-	<li>Tools</li>
-	<li>Armor</li>
-	<li>World Generation</li>
-	<li>mcmod.info</li>
-	<li>TileEntities</li>
-	<li>TileEntities with Inventory</li>
-	<li>TileEntities Inventory GUI</li>
-	<li>Dynamic TileEntity Rendering</li>
-	<li>Advanced GUIs with Widgets</li>
-	<li>Energy API - Tesla - Blocks</li>
-	<li>Energy API - Tesla - Items</li>
-	<li>Configuration</li>
-	<li>Packets and Packet Handlers</li>
-	<li>Event Handling</li>
-	<li>Keybindings</li>
-	<li>Commands</li>
-</ul>
+- [Setting up the Development Environment](/tutorials/forge-modding-19/workspace-setup/)
+- [Main Mod Class](/tutorials/forge-modding-19/main-mod-class/)
+- [Proxy System](/tutorials/forge-modding-19/proxy-system/)
+- [Basic Items](/tutorials/forge-modding-19/basic-items/)
+- [JSON Item Models](/tutorials/forge-modding-19/json-item-models/)
+- [Basic Blocks](/tutorials/forge-modding-19/basic-blocks/)
+- [Basic Forge Blockstates](/tutorials/forge-modding-19/basic-forge-blockstates/)
+- [Localization](/tutorials/forge-modding-19/localization/)
+- Crops
+- JSON Block Models
+- Creative Tabs
+- Crafting/Furnace Recipes
+- Ore Dictionary
+- Food
+- Tools
+- Armor
+- World Generation
+- mcmod.info
+- TileEntities
+- TileEntities with Inventory
+- TileEntities with Inventory GUI
+- Dynamic TileEntity Rendering
+- Advanced GUIs with Widgets
+- Energy API - RF - Items
+- Energy API - RF - Blocks
+- Energy API - RF - GUI Widget
+- Energy API - Tesla - Items
+- Energy API - Tesla - Blocks
+- Energy API - Tesla - GUI Widget
+- Configuration
+- Packets and Packet Handlers
+- Event Handling
+- Keybindings
+- Commands
 
 ### Other Resources
 - [Forge Forum](http://minecraftforge.net/)
