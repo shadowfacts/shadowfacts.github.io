@@ -18,7 +18,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 	<li><a href="/tutorials/forge-modding-19/proxy-system/">Proxy System</a></li>
 	<li><a href="/tutorials/forge-modding-19/basic-items/">Basic Items</a></li>
 	<li><a href="/tutorials/forge-modding-19/json-item-models/">JSON Item Models</a></li>
-	<li>Basic Blocks</li>
+	<li><a href="/tutorials/forge-modding-19/basic-blocks/">Basic Blocks</a></li>
 	<li>Forge Blockstates</li>
 	<li>JSON Block Models</li>
 	<li>Crops</li>
