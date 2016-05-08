@@ -44,9 +44,14 @@ public class ItemBase extends Item {
 }
 {% endhighlight %}
 
-Our `ItemBase` class will make it simpler to add basic items quickly. You will have an error because we haven't created the `registerItemRenderer` method yet, so let's do that now.
+Our `ItemBase` class will make it simpler to add basic items quickly. `ItemBase` primarily has a convenience constructor that sets both the unlocalized and the registry names.
 
-In the `CommonProxy` class add a new method called `registerItemRenderer` that accepts an `Item`, an `int`, and a `String`.
+- The unlocalized name is used for translating the name of the item into the currently active language.
+- The registry name is used when registering our item with Forge and should _never, ever change_.
+
+The `setCreativeTab` method is an overriden version that returns `ItemBase` instead of `Item` so we can use it in our `register` method without casting, as you'll see later.
+
+You will have an error because we haven't created the `registerItemRenderer` method yet, so let's do that now. In the `CommonProxy` class add a new method called `registerItemRenderer` that accepts an `Item`, an `int`, and a `String`.
 
 {% highlight java linenos %}
 public void registerItemRenderer(Item item, int meta, String id) {
