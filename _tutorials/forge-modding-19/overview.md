@@ -19,7 +19,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 	<li><a href="/tutorials/forge-modding-19/basic-items/">Basic Items</a></li>
 	<li><a href="/tutorials/forge-modding-19/json-item-models/">JSON Item Models</a></li>
 	<li><a href="/tutorials/forge-modding-19/basic-blocks/">Basic Blocks</a></li>
-	<li>Forge Blockstates</li>
+	<li><a href="/tutorials/forge-modding-19/basic-forge-blockstates/">Basic Forge Blockstates</a></li>
 	<li>JSON Block Models</li>
 	<li>Crops</li>
 	<li>Localization</li>
@@ -47,6 +47,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 
 ### Other Resources
 - [Forge Forum](http://minecraftforge.net/)
+- [Forge Docs](https://mcforge.readthedocs.io/en/latest/)
 - #minecraftforge ([esper](https://esper.net)) IRC
 - [TheGreyGhost's Blog](http://greyminecraftcoder.blogspot.com.au/p/list-of-topics.html)
 - [MinecraftByExample](https://github.com/TheGreyGhost/MinecraftByExample)
