@@ -35,3 +35,8 @@ Now that Forge for 1.9.4 is [out](http://files.minecraftforge.net/maven/net/mine
 		Merges a Discord channel with Minecraft chat, primarily intended for servers.
 	</p>
 </div>
+<div class="mod">
+	<h3 class="mod-name"><a href="http://minecraft.curseforge.com/projects/shadowtweaks">ShadowTweaks</a></h3>
+	<span class="mod-version"><a href="http://minecraft.curseforge.com/projects/shadowtweaks/files/2302146">1.9.0</a></span>
+	<p class="mod-desc">A little tweaks mod with a variety of client/server tweaks.</p>
+</div>
