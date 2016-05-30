@@ -2,14 +2,10 @@
 date: 2016-05-06 11:16:00 -0400
 title: "Setting up the Development Environment"
 type: 'tutorial'
-series: 'forge-modding-19'
-series-name: 'Making a Forge Mod for 1.9'
+series: 'forge-modding-194'
+series-name: 'Making a Forge Mod for 1.9.4'
 layout: tutorial
 ---
-
-## [Updated to 1.9.4](/tutorials/forge-modding-194/)
-
------
 
 ### Java
 This series does not cover learning Java or installing the JDK. You should have the Java 8 JDK installed already.
@@ -18,7 +14,7 @@ This series does not cover learning Java or installing the JDK. You should have 
 I will be using [IntelliJ IDEA](https://jetbrains.com/idea/) throughout this series as it is my IDE of choice. You can download the free community version of IDEA [here](https://www.jetbrains.com/idea/). It is possible to use [Eclipse](https://www.eclipse.org/) if you prefer.
 
 ### Forge MDK
-From the [Forge files site](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.9.html), download the latest MDK for 1.9. (Click the button with the floppy disk icon labeled `MDK` on the left.) After download, unzip the MDK to a new folder wherever you like. After unzipping the MDK, we can delete a number of extraneous files that are part of the MDK. You can delete every file in the folder thats not one of these:
+From the [Forge files site](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.9.4.html), download the latest MDK for 1.9.4. (Click the button with the floppy disk icon labeled `MDK` on the left.) After download, unzip the MDK to a new folder wherever you like. After unzipping the MDK, we can delete a number of extraneous files that are part of the MDK. You can delete every file in the folder thats not one of these:
 
 - `src/`
 - `build.gradle`
@@ -53,4 +49,4 @@ Now, if everything ran sucessfully, you should have a file that has the `.ipr` e
 
 **Note:** If you have not launched IDEA before, you may need to go through some first time setup options beforehand.
 
-Now that you've got IDEA setup, check out [how to setup the main mod class](/tutorials/forge-modding-19/main-mod-class/).
+Now that you've got IDEA setup, check out [how to setup the main mod class](/tutorials/forge-modding-194/main-mod-class/).

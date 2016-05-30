@@ -2,15 +2,10 @@
 date: 2016-05-07 21:45:00 -0400
 title: "Basic Blocks"
 type: 'tutorial'
-series: 'forge-modding-19'
-series-name: 'Making a Forge Mod for 1.9'
+series: 'forge-modding-194'
+series-name: 'Making a Forge Mod for 1.9.4'
 layout: tutorial
 ---
-
-## [Updated to 1.9.4](/tutorials/forge-modding-194/)
-
------
-
 
 For our first block, we are going to make a Copper Ore to go along with our Copper Ingot. 
 
@@ -65,7 +60,7 @@ import net.minecraft.creativetab.CreativeTabs;
 public class BlockOre extends BlockBase {
 
 	public BlockOre(String name) {
-		super(Material.rock, name);
+		super(Material.ROCK, name);
 
 		setHardness(3f);
 		setResistance(5f);
@@ -97,7 +92,7 @@ public class ModBlocks {
 	public static BlockOre oreCopper;
 
 	public static void init() {
-		oreCopper = register(new BlockOre("oreCopper").setCreativeTab(CreativeTabs.tabMaterials));
+		oreCopper = register(new BlockOre("oreCopper").setCreativeTab(CreativeTabs.MATERIALS));
 	}
 
 	private static <T extends Block> T register(T block, ItemBlock itemBlock) {
@@ -142,13 +137,13 @@ Now, because we have our `BlockBase` and `ModBlocks` classes in place, we can qu
 public static BlockBase oreCopper;
 
 public static void init() {
-	oreCopper = register(new BlockBase(Material.rock, "oreCopper").setCreativeTab(CreativeTabs.tabMaterials));
+	oreCopper = register(new BlockBase(Material.ROCK, "oreCopper").setCreativeTab(CreativeTabs.tabMaterials));
 }
 {% endhighlight %}
 
 This will:
 
-1. Create a new `BlockBase` with the `rock` material and the name `oreCopper`.
+1. Create a new `BlockBase` with the `ROCK` material and the name `oreCopper`.
 2. Sets the creative tab of the block to the Materials tab.
 3. Registers the block with the `GameRegistry`.
 4. Registers the default `ItemBlock` with the `GameRegistry`.

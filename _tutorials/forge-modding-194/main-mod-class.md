@@ -2,14 +2,10 @@
 date: 2016-05-07 15:27:00 -0400
 title: "Main Mod Class"
 type: 'tutorial'
-series: 'forge-modding-19'
-series-name: 'Making a Forge Mod for 1.9'
+series: 'forge-modding-194'
+series-name: 'Making a Forge Mod for 1.9.4'
 layout: tutorial
 ---
-
-## [Updated to 1.9.4](/tutorials/forge-modding-194/)
-
------
 
 Every mod has a main mod class that Forge loads and uses as a starting point when it runs your mod. Before getting started, you'll want to delete all the exist code that comes in the MDK by deleting the `com.example.examplemod` package. For this tutorial, I'll be putting all of the code in the `net.shadowfacts.tutorial` package, so you'll need to create that in your IDE. Next, create a class called `TutorialMod`.
 

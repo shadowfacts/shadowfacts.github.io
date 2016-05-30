@@ -2,14 +2,10 @@
 date: 2016-05-07 16:32:00 -0400
 title: "JSON Item Models"
 type: 'tutorial'
-series: 'forge-modding-19'
-series-name: 'Making a Forge Mod for 1.9'
+series: 'forge-modding-194'
+series-name: 'Making a Forge Mod for 1.9.4'
 layout: tutorial
 ---
-
-## [Updated to 1.9.4](/tutorials/forge-modding-194/)
-
------
 
 Models for items and blocks are created using Mojang's fairly simple JSON format. We're going to create a simple item model for our copper ingot.
 

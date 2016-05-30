@@ -2,14 +2,10 @@
 date: 2016-05-29 10:29:00 -0400
 title: "Crops"
 type: 'tutorial'
-series: 'forge-modding-19'
-series-name: 'Making a Forge Mod for 1.9'
+series: 'forge-modding-194'
+series-name: 'Making a Forge Mod for 1.9.4'
 layout: tutorial
 ---
-
-## [Updated to 1.9.4](/tutorials/forge-modding-194/)
-
------
 
 ## Preparation
 
@@ -172,7 +168,7 @@ The `age` property is the age of the crop. All the objects inside the `age` obje
 ### Corn Seed
 Now let's make our corn seed item. Create a new class called `ItemCornSeed` that extends `ItemSeeds` and implements `ItemModelProvider`.
 
-In our constructor, we'll need to pass a couple of things to the `ItemSeeds` constructor, `ModBlocks.cropCorn` and `Blocks.farmland`. The first parameter of the `ItemSeeds` constructor is the crop block and the second is the soil block. Since we implemented `ItemModelProvider`, we'll need to provide an implementation for `registerItemModel` which will just use our `registerItemRenderer` proxy method.
+In our constructor, we'll need to pass a couple of things to the `ItemSeeds` constructor, `ModBlocks.cropCorn` and `Blocks.FARMLAND`. The first parameter of the `ItemSeeds` constructor is the crop block and the second is the soil block. Since we implemented `ItemModelProvider`, we'll need to provide an implementation for `registerItemModel` which will just use our `registerItemRenderer` proxy method.
 
 {% highlight java linenos %}
 package net.shadowfacts.tutorial.item;
@@ -186,7 +182,7 @@ import net.shadowfacts.tutorial.block.ModBlocks;
 public class ItemCornSeed extends ItemSeeds implements ItemModelProvider {
 
 	public ItemCornSeed() {
-		super(ModBlocks.cropCorn, Blocks.farmland);
+		super(ModBlocks.cropCorn, Blocks.FARMLAND);
 		setUnlocalizedName("cornSeed");
 		setRegistryName("cornSeed");
 	}
@@ -232,7 +228,7 @@ public static ItemBase corn;
 
 public static void init() {
 	// ...
-	corn = register(new ItemBase("corn").setCreativeTab(CreativeTabs.tabFood));
+	corn = register(new ItemBase("corn").setCreativeTab(CreativeTabs.FOOD));
 }
 // ...
 {% endhighlight %}

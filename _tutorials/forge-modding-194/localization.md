@@ -2,14 +2,10 @@
 date: 2016-05-08 9:15:00 -0400
 title: "Localization"
 type: 'tutorial'
-series: 'forge-modding-19'
-series-name: 'Making a Forge Mod for 1.9'
+series: 'forge-modding-194'
+series-name: 'Making a Forge Mod for 1.9.4'
 layout: tutorial
 ---
-
-## [Updated to 1.9.4](/tutorials/forge-modding-194/)
-
------
 
 If you'll recalled, we used the `setUnlocalizedName` method in both our `BlockBase` and `ItemBase` classes. The name that we passed into that method is what Minecraft uses when localizing the name of our block or item for the currently active language. 
 

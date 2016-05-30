@@ -2,14 +2,10 @@
 date: 2016-05-07 16:32:00 -0400
 title: "Basic Items"
 type: 'tutorial'
-series: 'forge-modding-19'
-series-name: 'Making a Forge Mod for 1.9'
+series: 'forge-modding-194'
+series-name: 'Making a Forge Mod for 1.9.4'
 layout: tutorial
 ---
-
-## [Updated to 1.9.4](/tutorials/forge-modding-194/)
-
------
 
 Now that we've got the basic structure of our mod set up, we can create our first item. This item will be fairly simple, just a copper ingot.
 
@@ -125,7 +121,7 @@ Now to create our actual item, the copper ingot. Because we've created the `Item
 public static ItemBase ingotCopper;
 
 public static void init() {
-	ingotCopper = register(new ItemBase("ingotCopper").setCreativeTab(CreativeTabs.tabMaterials));
+	ingotCopper = register(new ItemBase("ingotCopper").setCreativeTab(CreativeTabs.MATERIALS));
 }
 {% endhighlight %}
 
