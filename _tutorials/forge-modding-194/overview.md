@@ -23,7 +23,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - [Localization](/tutorials/forge-modding-194/localization/)
 - [Crops](/tutorials/forge-modding-194/crops/)
 - JSON Block Models
-- Creative Tabs
+- [Creative Tabs](/tutorials/forge-modding-194/creative-tabs/)
 - Crafting/Furnace Recipes
 - Ore Dictionary
 - Food
