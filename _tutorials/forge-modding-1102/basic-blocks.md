@@ -4,7 +4,7 @@ title: "Basic Blocks"
 type: 'tutorial'
 series: 'forge-modding-1102'
 series-name: 'Making a Forge Mod for 1.10.2'
-layout: tutorial
+layout: page
 ---
 
 For our first block, we are going to make a Copper Ore to go along with our Copper Ingot. 

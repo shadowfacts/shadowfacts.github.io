@@ -1,38 +1,48 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
+	<div class="footer-col-wrapper">
+		<div class="footer-col footer-col-1">
+			<ul class="contact-list">
+				<li>{{ site.title }}</li>
+				<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+				<li>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></li>
+			</ul>
+		</div>
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+		<div class="footer-col footer-col-2">
+			<ul class="social-media-list">
+				{% if site.github_username %}
+				<li>
+					{% include icon-github.html username=site.github_username %}
+				</li>
+				{% endif %}
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
+				{% if site.twitter_username %}
+				<li>
+					{% include icon-twitter.html username=site.twitter_username %}
+				</li>
+				{% endif %}
+			</ul>
+		</div>
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
+		<div class="footer-col footer-col-3">
+			<ul>
+				<li>
+					<label for="dark-theme">Dark theme:</label>
+					<input type="checkbox" id="dark-theme">
+				</li>
+			</ul>
+		</div>
+	</div>
 
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
-  </div>
+	<script>
+		var el = document.getElementById("dark-theme");
+		el.checked = Cookies.get("theme") == "dark";
+		el.onclick = function() {
+			var theme = this.checked ? "dark" : "light";
+			Cookies.set("theme", theme)
+			window.location.reload();
+		};
+	</script>
 
 </footer>

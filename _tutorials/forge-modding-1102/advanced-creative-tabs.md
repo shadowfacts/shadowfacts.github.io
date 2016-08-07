@@ -4,7 +4,7 @@ title: "Advanced Creative Tabs"
 type: 'tutorial'
 series: 'forge-modding-1102'
 series-name: 'Making a Forge Mod for 1.1.0.2'
-layout: tutorial
+layout: page
 ---
 
 ## Searchable Tab

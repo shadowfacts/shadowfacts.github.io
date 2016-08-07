@@ -1,7 +1,8 @@
 # Site settings
 title: Shadowfacts
+subtitle: The outer part of a shadow is called the penumbra
 email: me@shadowfacts.net
-description: Just my various ramblings (The outer part of a shadow is called the penumbra!)
+description: Just my various ramblings.
 baseurl: 
 url: https://shadowfacts.net
 enforce_ssl: shadowfacts.net
@@ -12,6 +13,9 @@ github_username:  shadowfacts
 markdown: kramdown
 
 permalink: /:categories/:year/:month/:day/:title/
+
+gems: [jekyll-paginate]
+paginate: 5
 
 collections:
   series:

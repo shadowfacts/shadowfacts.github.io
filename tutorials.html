@@ -1,15 +1,15 @@
 ---
-layout: page
+layout: default
 title: Tutorials
 permalink: /tutorials/
 ---
 
-<ul class="post-list">
+<div class="main">
 	{% for series in site.series %}
-		<li>
-			<h2>
-				<a class="post-link" href="{{ series.url | prepend: site.baseurl }}">{{ series.title }}</a>
+		<article>
+			<h2 class="article-title">
+				<a href="{{ series.url | prepend: site.baseurl }}">{{ series.title }}</a>
 			</h2>
-		</li>
+		</article>
 	{% endfor %}
-</ul>
+</div>

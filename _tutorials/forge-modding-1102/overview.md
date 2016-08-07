@@ -4,7 +4,7 @@ title: "Overview"
 type: 'tutorial'
 series: 'forge-modding-1102'
 series-name: 'Making a Forge Mod for 1.10.2'
-layout: tutorial
+layout: page
 ---
 
 ### About
@@ -25,7 +25,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - JSON Block Models
 - [Creative Tabs](/tutorials/forge-modding-1102/creative-tabs/)
 - [Advanced Creative Tabs](/tutorials/forge-modding-1102/advanced-creative-tabs/)
-- Crafting/Furnace Recipes
+- [Crafting/Furnace Recipes](/tutorials/forge-modding-1102/crafting-furnace-recipes/)
 - Ore Dictionary
 - Food
 - Tools

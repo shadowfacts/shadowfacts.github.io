@@ -4,7 +4,7 @@ title: "Crops"
 type: 'tutorial'
 series: 'forge-modding-19'
 series-name: 'Making a Forge Mod for 1.9'
-layout: tutorial
+layout: page
 ---
 
 ## [Updated to 1.9.4](/tutorials/forge-modding-194/)

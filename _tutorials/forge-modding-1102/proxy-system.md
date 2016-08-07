@@ -4,7 +4,7 @@ title: "Proxy System"
 type: 'tutorial'
 series: 'forge-modding-1102'
 series-name: 'Making a Forge Mod for 1.10.2'
-layout: tutorial
+layout: page
 ---
 
 Minecraft (and therefore Forge) are split up between the client and the server, so certain things can only be done on the client. Because some classes only exist on the client, we'll be using Forge's proxy system to access those classes without having to worry about crashes on dedicated servers.

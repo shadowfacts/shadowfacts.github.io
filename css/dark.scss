@@ -1,0 +1,18 @@
+---
+---
+
+// spacing
+$spacing-unit: 30px;
+
+// colors
+$bodyBgColor: #1A1A1A;
+$mainBgColor: #0E0E0E;
+$siteYellow: #F9C72F;
+$hackerGray: #6C6C6C;
+$articleTitleColor: #DEDEDE;
+$articleTextColor: #BDBDBD;
+$ruleEdge: #1f1f1f;
+$ruleCenter: $hackerGray;
+$codeBackground: #110;
+
+@import "normalize", "theme", "syntax-highlighting";
