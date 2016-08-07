@@ -4,7 +4,7 @@ title: "Setting up the Development Environment"
 type: 'tutorial'
 series: 'forge-modding-194'
 series-name: 'Making a Forge Mod for 1.9.4'
-layout: page
+layout: tutorial
 ---
 
 ### Java

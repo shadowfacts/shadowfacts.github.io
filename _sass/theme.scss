@@ -255,6 +255,10 @@ article {
 
 		span {
 			margin: 0 0.5rem;
+
+			&.tutorial-series > a {
+				color: $siteYellow !important;
+			}
 		}
 
 		a {

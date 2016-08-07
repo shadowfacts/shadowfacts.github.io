@@ -4,7 +4,7 @@ title: "Creative Tabs"
 type: 'tutorial'
 series: 'forge-modding-194'
 series-name: 'Making a Forge Mod for 1.9.4'
-layout: page
+layout: tutorial
 ---
 
 In this tutorial, we are going to create a custom creative tab that players can use to access all of our items when in creative mode.

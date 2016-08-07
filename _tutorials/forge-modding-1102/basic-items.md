@@ -4,7 +4,7 @@ title: "Basic Items"
 type: 'tutorial'
 series: 'forge-modding-1102'
 series-name: 'Making a Forge Mod for 1.10.2'
-layout: page
+layout: tutorial
 ---
 
 Now that we've got the basic structure of our mod set up, we can create our first item. This item will be fairly simple, just a copper ingot.

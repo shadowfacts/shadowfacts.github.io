@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="main">
+	<article itemscope itemtype="http://schema.org/BlogPosting">
+
+		<h2 class="article-title">
+			{{ page.title }}
+		</h2>
+
+		<div class="article-top-meta">
+			<span class="tutorial-series">
+				<a href="{{ page.series | prepend: '/tutorials/' | prepend: site.baseurl }}">{{ page.series-name }}</a>
+			</span>
+			<br>
+			<span class="posted-on">
+				<time class="entry-date published" datetime="{{ page.date | date_to_xmlschema }}">
+						{{ page.date | date: "%b %-d, %Y" }}
+					</time>
+			</span>
+		</div>
+
+		<div class="article-content">
+			{{ content }}
+		</div>
+
+	</article>
+</div>

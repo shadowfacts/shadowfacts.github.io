@@ -4,7 +4,7 @@ title: "Main Mod Class"
 type: 'tutorial'
 series: 'forge-modding-19'
 series-name: 'Making a Forge Mod for 1.9'
-layout: page
+layout: tutorial
 ---
 
 ## [Updated to 1.9.4](/tutorials/forge-modding-194/)

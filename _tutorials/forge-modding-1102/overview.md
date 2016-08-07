@@ -4,7 +4,7 @@ title: "Overview"
 type: 'tutorial'
 series: 'forge-modding-1102'
 series-name: 'Making a Forge Mod for 1.10.2'
-layout: page
+layout: tutorial
 ---
 
 ### About

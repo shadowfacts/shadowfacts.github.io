@@ -4,7 +4,7 @@ title: "Forge Blockstates"
 type: 'tutorial'
 series: 'forge-modding-194'
 series-name: 'Making a Forge Mod for 1.9.4'
-layout: page
+layout: tutorial
 ---
 
 Now that we've got our copper ore block, let's add a simple blockstate to give it a texture. This will go in a file at `src/main/resources/assets/tutorial/blockstates/oreCopper.json`.
