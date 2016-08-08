@@ -8,7 +8,7 @@ layout: tutorial
 ---
 
 ### About
-This series of tutorials teaches modding [Minecraft](https://minecraft.net) version 1.9.4 using [Forge](http://minecraftforge.net).
+This series of tutorials teaches modding [Minecraft](https://minecraft.net) version 1.10.2 using [Forge](http://minecraftforge.net).
 
 **This tutorial series does not teach Java. You should already know Java before you try to mod Minecraft.**
 
