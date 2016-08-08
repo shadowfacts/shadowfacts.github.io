@@ -26,7 +26,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - [Creative Tabs](/tutorials/forge-modding-1102/creative-tabs/)
 - [Advanced Creative Tabs](/tutorials/forge-modding-1102/advanced-creative-tabs/)
 - [Crafting/Smelting Recipes](/tutorials/forge-modding-1102/crafting-smelting-recipes/)
-- Ore Dictionary
+- [Ore Dictionary](/tutorials/forge-modding-1102/ore-dictionary/)
 - Food
 - Tools
 - Armor
