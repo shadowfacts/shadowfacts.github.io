@@ -22,11 +22,11 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - [Basic Forge Blockstates](/tutorials/forge-modding-1102/basic-forge-blockstates/)
 - [Localization](/tutorials/forge-modding-1102/localization/)
 - [Crops](/tutorials/forge-modding-1102/crops/)
-- JSON Block Models
 - [Creative Tabs](/tutorials/forge-modding-1102/creative-tabs/)
 - [Advanced Creative Tabs](/tutorials/forge-modding-1102/advanced-creative-tabs/)
 - [Crafting/Smelting Recipes](/tutorials/forge-modding-1102/crafting-smelting-recipes/)
 - [Ore Dictionary](/tutorials/forge-modding-1102/ore-dictionary/)
+- [JSON Block Models](/tutorials/forge-modding-1102/json-block-models/)
 - Food
 - Tools
 - Armor
