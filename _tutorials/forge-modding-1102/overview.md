@@ -27,7 +27,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - [Crafting/Smelting Recipes](/tutorials/forge-modding-1102/crafting-smelting-recipes/)
 - [Ore Dictionary](/tutorials/forge-modding-1102/ore-dictionary/)
 - [JSON Block Models](/tutorials/forge-modding-1102/json-block-models/)
-- Food
+- [Food](/tutorials/forge-modding-1102/food/)
 - Tools
 - Armor
 - World Generation
