@@ -28,7 +28,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - [Ore Dictionary](/tutorials/forge-modding-1102/ore-dictionary/)
 - [JSON Block Models](/tutorials/forge-modding-1102/json-block-models/)
 - [Food](/tutorials/forge-modding-1102/food/)
-- Tools
+- [Tools](/tutorials/forge-modding-1102/tools/)
 - Armor
 - World Generation
 - mcmod.info
