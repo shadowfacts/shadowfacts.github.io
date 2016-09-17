@@ -15,7 +15,7 @@ First we'll need to create a tool material for our new tools to use. We'll use F
 // ...
 public class TutorialMod {
 	// ...
-	public static final Item.ToolMaterial copperMaterial = EnumHelper.addToolMaterial("COPPER", 2, 500, 6, 2, 14);
+	public static final Item.ToolMaterial copperToolMaterial = EnumHelper.addToolMaterial("COPPER", 2, 500, 6, 2, 14);
 	// ...
 }
 {% endhighlight %}
@@ -75,7 +75,7 @@ public class ModItems {
 
 	public static void init() {
 		// ...
-		copperSword = register(new ItemSword(TutorialMod.copperMaterial, "copperSword"));
+		copperSword = register(new ItemSword(TutorialMod.copperToolMaterial, "copperSword"));
 	}
 	// ...
 }
@@ -151,7 +151,7 @@ public class ModItems {
 
 	public static void init() {
 		// ...
-		copperPickaxe = register(new ItemPickaxe(TutorialMod.copperMaterial, "copperPickaxe"));
+		copperPickaxe = register(new ItemPickaxe(TutorialMod.copperToolMaterial, "copperPickaxe"));
 	}
 	// ...
 }
@@ -229,7 +229,7 @@ public class ModItems {
 
 	public static void init() {
 		// ...
-		copperAxe = register(new ItemAxe(TutorialMod.copperMaterial, "copperAxe"));
+		copperAxe = register(new ItemAxe(TutorialMod.copperToolMaterial, "copperAxe"));
 	}
 	// ...
 }
@@ -308,7 +308,7 @@ public class ModItems {
 
 	public static void init() {
 		// ...
-		copperShovel = register(new ItemShovel(TutorialMod.copperMaterial, "copperShovel"));
+		copperShovel = register(new ItemShovel(TutorialMod.copperToolMaterial, "copperShovel"));
 	}
 	// ...
 }
