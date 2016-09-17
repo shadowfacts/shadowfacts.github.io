@@ -29,7 +29,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - [JSON Block Models](/tutorials/forge-modding-1102/json-block-models/)
 - [Food](/tutorials/forge-modding-1102/food/)
 - [Tools](/tutorials/forge-modding-1102/tools/)
-- Armor
+- [Armor](/tutorials/forge-modding-1102/armor/)
 - World Generation
 - mcmod.info
 - TileEntities
