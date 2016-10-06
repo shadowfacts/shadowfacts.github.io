@@ -285,6 +285,23 @@ article {
 			height: auto;
 			margin: 1rem auto;
 		}
+
+		h1:before,
+		h2:before {
+			content: "";
+			width: 100%;
+			height: 1px;
+			background-image: linear-gradient(to right, $hackerGray, $ruleEdge);
+			position: absolute;
+		}
+
+		h1:before {
+			margin-top: 34px;
+		}
+
+		h2:before {
+			margin-top: 28px;
+		}
 	}
 
 	.article-meta > span:not(:last-child) {
