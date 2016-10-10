@@ -30,7 +30,9 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - [Food](/tutorials/forge-modding-1102/food/)
 - [Tools](/tutorials/forge-modding-1102/tools/)
 - [Armor](/tutorials/forge-modding-1102/armor/)
-- World Generation
+- [World Generation: Ore](/tutorials/forge-modding-1102/world-generation-ore/)
+- World Generation: Tree
+- World Generation: Structure
 - mcmod.info
 - TileEntities
 - TileEntities with Inventory
