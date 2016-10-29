@@ -125,7 +125,23 @@ We call the `generateOre` method with:
 8. The size of the vein to generate (a random number from 4 to 7).
 9. The number of times per chunk to generate (6).
 
-If you create a new world and search around for a bit, you'll bet able to find a deposit of our Copper Ore!
+Lastly, in the `preInit` of our main mod class, we'll need to register our world generator.
+
+{% highlight java linenos %}
+// ...
+public class TutorialMod {
+	// ...
+	public void preInit(FMLPreInitializationEvent event) {
+		// ...
+		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
+	}
+	// ...
+}
+{% endhighlight %}
+
+The `int` parameter of `GameRegistry.registerWorldGenerator` is the weight of our mod's world generator. This usually doens't matter, however, if you're experiencing issues with other mods interfering with your world generation, you may want to change this.
+
+Now, if you create a new world and search around for a bit, you'll bet able to find a deposit of our Copper Ore!
 
 You may want to play around with the vein size and chances settings until you achieve the desired concentration of ore per chunk.
 
