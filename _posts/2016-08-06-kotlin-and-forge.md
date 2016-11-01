@@ -5,6 +5,11 @@ date: 2016-08-06 16:45:30 -0400
 category: forge
 ---
 
+## Warning
+As of Oct. 31, 2016 my Forgelin fork has been discontinued and merged with [ShadowMC](https://github.com/shadowfacts/ShadowMC). All the files remain on GitHub/maven/CurseForge and you can continue using my Forgelin fork, however, it will not receive updates.
+
+-----
+
 So, you wanna use [Kotlin][] in your Forge mod? Well there's good news, I've just released [Forgelin][], a fork of [Emberwalker's Forgelin][EWForgelin], a library that provides utilities for using Kotlin with Minecraft/Forge. 
 
 Primarily Forgelin provides a Kotlin langauge adapter that allows your main-mod class to be a [`object`][KotlinObject]. In order to use the language adapter, you must specify the `modLanguageAdapter` property in your `@Mod` annotation to be `net.shadowfacts.forgelin.KotlinAdapter`.
