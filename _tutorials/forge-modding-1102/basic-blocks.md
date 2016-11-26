@@ -89,10 +89,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
 
-	public static BlockOre oreCopper;
-
 	public static void init() {
-		oreCopper = register(new BlockOre("oreCopper").setCreativeTab(CreativeTabs.MATERIALS));
+		
 	}
 
 	private static <T extends Block> T register(T block, ItemBlock itemBlock) {
@@ -134,16 +132,16 @@ public void preInit(FMLPreInitializationEvent event) {
 Now, because we have our `BlockBase` and `ModBlocks` classes in place, we can quickly add a new block:
 
 {% highlight java linenos %}
-public static BlockBase oreCopper;
+public static BlockOre oreCopper;
 
 public static void init() {
-	oreCopper = register(new BlockBase(Material.ROCK, "oreCopper").setCreativeTab(CreativeTabs.tabMaterials));
+	oreCopper = register(new BlockOre("oreCopper", "oreCopper").setCreativeTab(CreativeTabs.MATERIALS));
 }
 {% endhighlight %}
 
 This will:
 
-1. Create a new `BlockBase` with the `ROCK` material and the name `oreCopper`.
+1. Create a new `BlockOre` with the name `oreCopper`.
 2. Sets the creative tab of the block to the Materials tab.
 3. Registers the block with the `GameRegistry`.
 4. Registers the default `ItemBlock` with the `GameRegistry`.
