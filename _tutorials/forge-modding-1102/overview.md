@@ -35,7 +35,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - World Generation: Structure
 - mcmod.info
 - [Tile Entities](/tutorials/forge-modding-1102/tile-entities/)
-- Tile Entities with Inventory
+- [Tile Entities with Inventory](/tutorials/forge-modding-1102/tile-entities-inventory/)
 - Tile Entities with Inventory GUI
 - Dynamic Tile Entity Rendering
 - Advanced GUIs with Widgets
