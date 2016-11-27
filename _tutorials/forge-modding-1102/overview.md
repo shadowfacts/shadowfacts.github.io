@@ -34,10 +34,10 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - World Generation: Tree
 - World Generation: Structure
 - mcmod.info
-- TileEntities
-- TileEntities with Inventory
-- TileEntities with Inventory GUI
-- Dynamic TileEntity Rendering
+- [Tile Entities](/tutorials/forge-modding-1102/tile-entities/)
+- Tile Entities with Inventory
+- Tile Entities with Inventory GUI
+- Dynamic Tile Entity Rendering
 - Advanced GUIs with Widgets
 - Energy API - RF - Items
 - Energy API - RF - Blocks
@@ -45,6 +45,9 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - Energy API - Tesla - Items
 - Energy API - Tesla - Blocks
 - Energy API - Tesla - GUI Widget
+- Energy API - Forge Energy - Items
+- Energy API - Forge Energy - Blocks
+- Energy API - Forge Energy - GUI Widget
 - Configuration
 - Packets and Packet Handlers
 - Event Handling

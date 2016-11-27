@@ -35,7 +35,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - World Generation: Tree
 - World Generation: Structure
 - mcmod.info
-- TileEntities
+- [Tile Entities](/tutorials/forge-modding-111/tile-entities/)
 - TileEntities with Inventory
 - TileEntities with Inventory GUI
 - Dynamic TileEntity Rendering
@@ -46,6 +46,9 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - Energy API - Tesla - Items
 - Energy API - Tesla - Blocks
 - Energy API - Tesla - GUI Widget
+- Energy API - Forge Energy - Items
+- Energy API - Forge Energy - Blocks
+- Energy API - Forge Energy - GUI Widget
 - Configuration
 - Packets and Packet Handlers
 - Event Handling
