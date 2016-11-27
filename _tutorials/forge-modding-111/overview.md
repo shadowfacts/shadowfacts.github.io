@@ -31,6 +31,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - [Tools](/tutorials/forge-modding-111/tools/)
 - [Armor](/tutorials/forge-modding-111/armor/)
 - [World Generation: Ore](/tutorials/forge-modding-111/world-generation-ore/)
+- _Interlude:_ [Updating to 1.11](/tutorials/forge-modding-111/updating-to-111/)
 - World Generation: Tree
 - World Generation: Structure
 - mcmod.info
