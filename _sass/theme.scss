@@ -193,8 +193,8 @@ article {
 	position: relative;
 	padding: 4rem 0;
 
-	&:not(.no-rule):not(:first-child):not(:last-child) {
-		&:before, &:after {
+	&:not(.no-rule):not(:last-child) {
+		&:after {
 			content: "";
 			width: 150px;
 			height: 1px;
@@ -202,10 +202,6 @@ article {
 			position: absolute;
 			left: 50%;
 			margin-left: -75px;
-		}
-
-		&:before {
-			top: 0;
 		}
 
 		&:after {

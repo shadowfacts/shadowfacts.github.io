@@ -2,8 +2,8 @@
 date: 2016-06-15 11:42:00 -0400
 title: "Advanced Creative Tabs"
 type: 'tutorial'
-series: 'forge-modding-1102'
-series-name: 'Making a Forge Mod for 1.10.2'
+series: 'forge-modding-111'
+series-name: 'Making a Forge Mod for 1.11'
 layout: tutorial
 ---
 
@@ -18,7 +18,7 @@ There are two main parts to this:
 package net.shadowfacts.tutorial.client;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.shadowfacts.tutorial.TutorialMod;
 import net.shadowfacts.tutorial.item.ModItems;
 
@@ -30,8 +30,8 @@ public class TutorialTab extends CreativeTabs {
 	}
 
 	@Override
-	public Item getTabIconItem() {
-		return ModItems.ingotCopper;
+	public ItemStack getTabIconItem() {
+		return new ItemStack(ModItems.ingotCopper);
 	}
 
 	@Override

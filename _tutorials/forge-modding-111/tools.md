@@ -2,8 +2,8 @@
 date: 2016-08-14 15:04:00 -0400
 title: "Tools"
 type: 'tutorial'
-series: 'forge-modding-1102'
-series-name: 'Making a Forge Mod for 1.10.2'
+series: 'forge-modding-111'
+series-name: 'Making a Forge Mod for 1.11'
 layout: tutorial
 ---
 
@@ -56,7 +56,7 @@ public class ItemSword extends net.minecraft.item.ItemSword implements ItemModel
 		setUnlocalizedName(name);
 		this.name = name;
 	}
-
+	
 	@Override
 	public void registerItemModel(Item item) {
 		TutorialMod.proxy.registerItemRenderer(this, 0, name);
@@ -72,34 +72,34 @@ Next, we'll add our copper sword to our `ModItems` class simply by adding a fiel
 public class ModItems {
 	// ...
 	public static ItemSword copperSword;
-
+	
 	public static void init() {
 		// ...
-		copperSword = register(new ItemSword(TutorialMod.copperToolMaterial, "copperSword"));
+		copperSword = register(new ItemSword(TutorialMod.copperToolMaterial, "copper_sword"));
 	}
 	// ...
 }
 {% endhighlight %}
 
-We'll also create our JSON item model at `assets/tutorial/models/item/copperSword.json`. Unlike our other item models, the parent for the model will be `item/handheld` instead of `item/generated`. `item/handheld` provides the transformations used by handheld items, such as tools.
+We'll also create our JSON item model at `assets/tutorial/models/item/copper_sword.json`. Unlike our other item models, the parent for the model will be `item/handheld` instead of `item/generated`. `item/handheld` provides the transformations used by handheld items, such as tools.
 
 {% highlight json linenos %}
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "tutorial:items/copperSword"
+		"layer0": "tutorial:items/copper_sword"
 	}
 }
 {% endhighlight %}
 
-We'll also need the texture, which you can download [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperSword.png).
+We'll also need the texture, which you can download [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.11/src/main/resources/assets/tutorial/textures/items/copper_sword.png).
 
 And lastly, we'll add a localization entry for the sword.
 
 {% highlight properties linenos %}
 # Items
 # ...
-item.copperSword.name=Copper Sword
+item.copper_sword.name=Copper Sword
 {% endhighlight %}
 
 ![Copper Sword](http://i.imgur.com/ye5yMy4.png)
@@ -132,7 +132,7 @@ public class ItemPickaxe extends net.minecraft.item.ItemPickaxe implements ItemM
 		setUnlocalizedName(name);
 		this.name = name;
 	}
-
+	
 	@Override
 	public void registerItemModel(Item item) {
 		TutorialMod.proxy.registerItemRenderer(this, 0, name);
@@ -148,34 +148,34 @@ Next, we'll add our copper pickaxe to our `ModItems` class simply by adding a fi
 public class ModItems {
 	// ...
 	public static ItemPickaxe copperPickaxe;
-
+	
 	public static void init() {
 		// ...
-		copperPickaxe = register(new ItemPickaxe(TutorialMod.copperToolMaterial, "copperPickaxe"));
+		copperPickaxe = register(new ItemPickaxe(TutorialMod.copperToolMaterial, "copper_pickaxe"));
 	}
 	// ...
 }
 {% endhighlight %}
 
-We'll create a JSON model for our item at `assets/tutorial/models/item/copperPickaxe.json`. This model will have a parent of `item/handheld` instead of `item/generated` so it inherits the transformations for handheld models.
+We'll create a JSON model for our item at `assets/tutorial/models/item/copper_pickaxe.json`. This model will have a parent of `item/handheld` instead of `item/generated` so it inherits the transformations for handheld models.
 
 {% highlight json linenos %}
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "tutorial:items/copperPickaxe"
+		"layer0": "tutorial:items/copper_pickaxe"
 	}
 }
 {% endhighlight %}
 
-You can download the texture for the copper pickaxe [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperPickaxe.png).
+You can download the texture for the copper pickaxe [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.11/src/main/resources/assets/tutorial/textures/items/copper_pickaxe.png).
 
 Lastly, we'll need a localization entry for the pick.
 
 {% highlight properties linenos %}
 # Items
 # ...
-item.copperPickaxe.name=Copper Pickaxe
+item.copper_pickaxe.name=Copper Pickaxe
 {% endhighlight %}
 
 ![Copper Pickaxe](http://i.imgur.com/FsbvVur.png)
@@ -210,7 +210,7 @@ public class ItemAxe extends net.minecraft.item.ItemAxe implements ItemModelProv
 		setUnlocalizedName(name);
 		this.name = name;
 	}
-
+	
 	@Override
 	public void registerItemModel(Item item) {
 		TutorialMod.proxy.registerItemRenderer(this, 0, name);
@@ -226,16 +226,16 @@ Next, we'll add our copper axe to our `ModItems` class simply by adding a field 
 public class ModItems {
 	// ...
 	public static ItemAxe copperAxe;
-
+	
 	public static void init() {
 		// ...
-		copperAxe = register(new ItemAxe(TutorialMod.copperToolMaterial, "copperAxe"));
+		copperAxe = register(new ItemAxe(TutorialMod.copperToolMaterial, "copper_axe"));
 	}
 	// ...
 }
 {% endhighlight %}
 
-Additionally, we'll need a JSON item model. We'll create it at `assets/tutorials/models/item/copperAxe.json`.
+Additionally, we'll need a JSON item model. We'll create it at `assets/tutorials/models/item/copper_axe.json`.
 
 Our model will have a parent of `item/handheld` instead of `item/generated` so it has the same transformations used by other hand-held items.
 
@@ -243,19 +243,19 @@ Our model will have a parent of `item/handheld` instead of `item/generated` so i
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "tutorial:items/copperHoe"
+		"layer0": "tutorial:items/copper_axe"
 	}
 }
 {% endhighlight %}
 
-You can download the texture for the copper axe [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperAxe.png).
+You can download the texture for the copper axe [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.11/src/main/resources/assets/tutorial/textures/items/copper_axe.png).
 
 Lastly, we'll need a localization entry for our axe.
 
 {% highlight properties linenos %}
 # Items
 # ...
-item.copperAxe.name=Copper Axe
+item.copper_axe.name=Copper Axe
 {% endhighlight %}
 
 ![Copper Axe](http://i.imgur.com/5E3vjTo.png)
@@ -289,7 +289,7 @@ public class ItemShovel extends ItemSpade implements ItemModelProvider {
 		setUnlocalizedName(name);
 		this.name = name;
 	}
-
+	
 	@Override
 	public void registerItemModel(Item item) {
 		TutorialMod.proxy.registerItemRenderer(this, 0, name);
@@ -305,34 +305,34 @@ Next, we'll add our copper shovel to our `ModItems` class simply by adding a fie
 public class ModItems {
 	// ...
 	public static ItemShovel copperShovel;
-
+	
 	public static void init() {
 		// ...
-		copperShovel = register(new ItemShovel(TutorialMod.copperToolMaterial, "copperShovel"));
+		copperShovel = register(new ItemShovel(TutorialMod.copperToolMaterial, "copper_shovel"));
 	}
 	// ...
 }
 {% endhighlight %}
 
-Next, we'll create a JSON item model for our shovel at `assets/tutorial/models/item/copperShovel.json`. This model will have a parent of `item/handheld`, unlike our previous item models, so it inherits the transformations used by handheld items.
+Next, we'll create a JSON item model for our shovel at `assets/tutorial/models/item/copper_shovel.json`. This model will have a parent of `item/handheld`, unlike our previous item models, so it inherits the transformations used by handheld items.
 
 {% highlight json linenos %}
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "tutorial:items/copperShovel"
+		"layer0": "tutorial:items/copper_shovel"
 	}
 }
 {% endhighlight %}
 
-You can download the texture for our shovel [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperShovel.png).
+You can download the texture for our shovel [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copper_shovel.png).
 
 We'll also need a localization entry for our shovel.
 
 {% highlight properties linenos %}
 # Items
 # ...
-item.copperShovel.name=Copper Shovel
+item.copper_shovel.name=Copper Shovel
 {% endhighlight %}
 
 ![Copper Shovel](http://i.imgur.com/l1VMi6L.png)
@@ -365,7 +365,7 @@ public class ItemHoe extends net.minecraft.item.ItemHoe implements ItemModelProv
 		setUnlocalizedName(name);
 		this.name = name;
 	}
-
+	
 	@Override
 	public void registerItemModel(Item item) {
 		TutorialMod.proxy.registerItemRenderer(this, 0, name);
@@ -380,35 +380,35 @@ Next, we'll add our hoe to our `ModItems` class simply by adding a field and ini
 // ...
 public class ModItems {
 	// ...
-	public static ItemHoe copperHoe;
+	public static ItemSword copperHoe;
 	
 	public static void init() {
 		// ...
-		copperHoe = register(new ItemSword(TutorialMod.copperToolMaterial, "copperHoe"));
+		copperHoe = register(new ItemSword(TutorialMod.copperToolMaterial, "copper_hoe"));
 	}
 	// ...
 }
 {% endhighlight %}
 
-Next, we'll create a JSON item model for our hoe at `assets/tutorial/models/item/copperHoe.json`. This model will have a parent of `item/handheld` instead of `item/generated` so it inherits the transformations used by vanilla handheld items.
+Next, we'll create a JSON item model for our hoe at `assets/tutorial/models/item/copper_hoe.json`. This model will have a parent of `item/handheld` instead of `item/generated` so it inherits the transformations used by vanilla handheld items.
 
 {% highlight json linenos %}
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "tutorial:items/copperHoe"
+		"layer0": "tutorial:items/copper_hoe"
 	}
 }
 {% endhighlight %}
 
-You can download the copper hoe texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperHoe.png).
+You can download the copper hoe texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copper_hoe.png).
 
 Lastly, we'll need a localization entry for our hoe.
 
 {% highlight properties linenos %}
 # Items
 # ...
-item.copperHoe.name=Copper Hoe
+item.copper_hoe.name=Copper Hoe
 {% endhighlight %}
 
 ![Copper Hoe](http://i.imgur.com/8PZ3MdD.png)
