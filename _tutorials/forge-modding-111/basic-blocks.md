@@ -135,7 +135,7 @@ Now, because we have our `BlockBase` and `ModBlocks` classes in place, we can qu
 public static BlockOre oreCopper;
 
 public static void init() {
-	oreCopper = register(new BlockOre("ore_copper", "oreCopper").setCreativeTab(CreativeTabs.MATERIALS));
+	oreCopper = register(new BlockOre("ore_copper").setCreativeTab(CreativeTabs.MATERIALS));
 }
 {% endhighlight %}
 
