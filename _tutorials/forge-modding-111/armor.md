@@ -72,7 +72,7 @@ public class ModItems {
 
 	public static void init() {
 		// ...
-		copperHelmet = register(new ItemArmor(TutorialMod.copeprArmorMaterial, EntityEquipmentSlot.HEAD, "copper_helmet"));
+		copperHelmet = register(new ItemArmor(TutorialMod.copperArmorMaterial, EntityEquipmentSlot.HEAD, "copper_helmet"));
 	}
 }
 {% endhighlight %}
@@ -81,7 +81,7 @@ Next, we'll need to create a JSON model for our item. The file will be at `src/m
 
 {% highlight java linenos %}
 {
-	"parent": "item/generated"
+	"parent": "item/generated",
 	"textures": {
 		"layer0": "tutorial:items/copper_helmet"
 	}
@@ -107,7 +107,7 @@ public class ModItems {
 
 	public static void init() {
 		// ...
-		copperChestplate = register(new ItemArmor(TutorialMod.copeprArmorMaterial, EntityEquipmentSlot.CHEST, "copper_chestplate"));
+		copperChestplate = register(new ItemArmor(TutorialMod.copperArmorMaterial, EntityEquipmentSlot.CHEST, "copper_chestplate"));
 	}
 }
 {% endhighlight %}
@@ -116,7 +116,7 @@ Next, we'll need to create a JSON model for our item. The file will be at `src/m
 
 {% highlight java linenos %}
 {
-	"parent": "item/generated"
+	"parent": "item/generated",
 	"textures": {
 		"layer0": "tutorial:items/copper_chestplate"
 	}
@@ -142,7 +142,7 @@ public class ModItems {
 
 	public static void init() {
 		// ...
-		copperLeggings = register(new ItemArmor(TutorialMod.copeprArmorMaterial, EntityEquipmentSlot.LEGS, "copper_leggings"));
+		copperLeggings = register(new ItemArmor(TutorialMod.copperArmorMaterial, EntityEquipmentSlot.LEGS, "copper_leggings"));
 	}
 }
 {% endhighlight %}
@@ -151,7 +151,7 @@ Next, we'll need to create a JSON model for our item. The file will be at `src/m
 
 {% highlight java linenos %}
 {
-	"parent": "item/generated"
+	"parent": "item/generated",
 	"textures": {
 		"layer0": "tutorial:items/copper_leggings"
 	}
@@ -177,7 +177,7 @@ public class ModItems {
 
 	public static void init() {
 		// ...
-		copperBoots = register(new ItemArmor(TutorialMod.copeprArmorMaterial, EntityEquipmentSlot.FEET, "copper_boots"));
+		copperBoots = register(new ItemArmor(TutorialMod.copperArmorMaterial, EntityEquipmentSlot.FEET, "copper_boots"));
 	}
 }
 {% endhighlight %}
@@ -186,7 +186,7 @@ Next, we'll need to create a JSON model for our item. The file will be at `src/m
 
 {% highlight java linenos %}
 {
-	"parent": "item/generated"
+	"parent": "item/generated",
 	"textures": {
 		"layer0": "tutorial:items/copper_boots"
 	}
