@@ -10,7 +10,7 @@ layout: tutorial
 For our first block, we are going to make a Copper Ore to go along with our Copper Ingot. 
 
 ### Base Block
-We're going to do something similar to what we did for [Basic Items](/tutorials/forge-modding-19/basic-items/), create a base class for all of our blocks to extend to make our life a bit easier.
+We're going to do something similar to what we did for [Basic Items](/tutorials/forge-modding-1102/basic-items/), create a base class for all of our blocks to extend to make our life a bit easier.
 
 {% highlight java linenos %}
 package net.shadowfacts.tutorial.block;

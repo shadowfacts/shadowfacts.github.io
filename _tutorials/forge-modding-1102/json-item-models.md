@@ -9,7 +9,7 @@ layout: tutorial
 
 Models for items and blocks are created using Mojang's fairly simple JSON format. We're going to create a simple item model for our copper ingot.
 
-Before we do this, we'll need to add our copper ingot texture. Download the copper ingot texture from [here](https://raw.githubusercontent.com/CyanideX/Unity/master/assets/thermalfoundation/textures/items/material/IngotCopper.png) and save it to `src/main/resources/assets/tutorial/textures/items/ingotCopper.png` so we can use it from our model.
+Before we do this, we'll need to add our copper ingot texture. Download the copper ingot texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/ingotCopper.png) and save it to `src/main/resources/assets/tutorial/textures/items/ingotCopper.png` so we can use it from our model.
 
 
 Now we'll create a simple JSON model and save it to `src/main/resources/assets/tutorial/models/item/ingotCopper.json`

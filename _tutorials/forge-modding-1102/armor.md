@@ -160,11 +160,11 @@ Next, we'll need to create a JSON model for our item. The file will be at `src/m
 
 You can download the copper helmet texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperLeggings.png) and save it to `src/main/resources/assets/tutorial/textures/items/copperLeggings.png`.
 
-Lastly, we'll need to add a localization entry for the helmet.
+Lastly, we'll need to add a localization entry for the leggings.
 
 {% highlight properties linenos %}
 # ...
-item.copperLeggings.name=Copper Chestplate
+item.copperLeggings.name=Copper Leggings
 {% endhighlight %}
 
 ## Copper Boots
@@ -199,7 +199,7 @@ Lastly, we'll need to add a localization entry for the helmet.
 
 {% highlight properties linenos %}
 # ...
-item.copperBoots.name=Copper Chestplate
+item.copperBoots.name=Copper Boots
 {% endhighlight %}
 
 ## Done!

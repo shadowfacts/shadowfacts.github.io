@@ -243,7 +243,7 @@ Our model will have a parent of `item/handheld` instead of `item/generated` so i
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "tutorial:items/copperHoe"
+		"layer0": "tutorial:items/copperAxe"
 	}
 }
 {% endhighlight %}

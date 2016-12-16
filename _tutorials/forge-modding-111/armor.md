@@ -164,7 +164,7 @@ Lastly, we'll need to add a localization entry for the helmet.
 
 {% highlight properties linenos %}
 # ...
-item.copper_leggings.name=Copper Chestplate
+item.copper_leggings.name=Copper Leggings
 {% endhighlight %}
 
 ## Copper Boots
