@@ -45,7 +45,7 @@ Let's add a field to our `TutorialMod` class that stores the instance of our cre
 
 {% highlight java linenos %}
 // ...
-pubilc static final TutorialTab creativeTab = new TutorialTab();
+public static final TutorialTab creativeTab = new TutorialTab();
 // ...
 {% endhighlight %}
 
