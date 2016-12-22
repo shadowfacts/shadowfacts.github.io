@@ -212,10 +212,12 @@ public class TileEntityCounter extends TileEntity {
 	
 	public void incrementCount() {
 		count++;
+		markDirty();
 	}
 	
 	public void decrementCount() {
 		count--;
+		markDirty();
 	}
 
 }
@@ -227,6 +229,8 @@ Our `TileEntityCounter` class is fairly simple. It will:
 - Have a private `int count` field which will store the value of the counter.
 - Override the `writeToNBT` and `readFromNBT` methods so Minecraft is able to properly save and load it from the disk.
 - Provide `getCount`, `incrementCount`, and `decrementCount` methods for accessing and modifying the value of the field.
+
+Additionally, in the `incrementCount` and `decrementCount` methods, we call the `markDirty` method from the Vanilla `TilEntity` class. This method call tells Mincraft that our TE has changed since it was last saved to disk and therefore must be re-saved.
 
 ### The NBT (Named Binary Tag) Format
 
