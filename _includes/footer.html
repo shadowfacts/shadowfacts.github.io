@@ -36,13 +36,22 @@
 	</div>
 
 	<script>
-		var el = document.getElementById("dark-theme");
-		el.checked = Cookies.get("theme") == "dark";
-		el.onclick = function() {
-			var theme = this.checked ? "dark" : "light";
-			Cookies.set("theme", theme)
-			window.location.reload();
-		};
+		(() => {
+			const el = document.getElementById("dark-theme");
+			el.checked = getCookie("theme") == "dark";
+			el.onclick = function() {
+				setCookie("theme", this.checked ? "dark" : "light");
+				window.location.reload();
+			};
+		})();
 	</script>
+
+	<noscript>
+		<style>
+			.site-footer .footer-col-3 > ul {
+				display: none;
+			}
+		</style>
+	</noscript>
 
 </footer>

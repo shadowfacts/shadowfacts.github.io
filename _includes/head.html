@@ -6,7 +6,6 @@
 	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
@@ -14,14 +13,37 @@
 	<meta name="msapplication-TileColor" content="#F9C72F">
 	<meta name="msapplication-TileImage" content="/favicon-152.png">
 
-	<script src="/js/js.cookie.js"></script>
 	<script>
-		var theme = Cookies.get("theme");
-		if (theme == null) {
-			theme = "light";
-			Cookies.set("theme", "light")
+		function getCookie(name) {
+			const cookies = document.cookie.split(";");
+			for (const cookie of cookies) {
+				if (cookie.startsWith(name)) return cookie.substring(name.length + 1);
+			}
+			return null;
+		}
+		function setCookie(name, val) {
+			const cookies = document.cookie.split(";");
+			for (let i = 0; i < cookies.length; i++) {
+				if (cookies[i].startsWith(name)) {
+					cookies[i] = `${name}=${val}`;
+					document.cookie = cookies.join(";");
+					return;
+				}
+			}
+			document.cookie += `${name}=${val};`;
 		}
 
-		document.write("<link rel=\"stylesheet\" href=\"{{ '/css/" + theme + ".css' | prepend: site.baseurl }}\">");
+		(() => {
+			let theme = getCookie("theme");
+			if (theme == null) {
+				theme = "light";
+				setCookie("theme", "light");
+			}
+
+			document.write(`<link rel="stylesheet" href="/css/${theme}.css">`);
+		})();
 	</script>
+	<noscript>
+		<link rel="stylesheet" href="/css/light.css">
+	</noscript>
 </head>
