@@ -5,7 +5,7 @@ date: 2016-08-07 15:39:48 -0400
 category: meta
 ---
 
-Welcome to the fourth iteration of my website. I'm stil using Jekyll, however I've rewritten most of the styles from scratch. This theme is based on the [Hacker theme][HackerHexo] for [Hexo][] which is turn based on the [Hacker WordPress theme][HackerWP] but it has some notable differences.
+Welcome to the fourth iteration of my website. I'm still using Jekyll, however I've rewritten most of the styles from scratch. This theme is based on the [Hacker theme][HackerHexo] for [Hexo][] which is turn based on the [Hacker WordPress theme][HackerWP] but it has some notable differences.
 
 ### 1\. It's built for Jekyll.
 
