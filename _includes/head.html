@@ -16,8 +16,8 @@
 	<script>
 		function getCookie(name) {
 			const cookies = document.cookie.split(";");
-			for (const cookie of cookies) {
-				if (cookie.startsWith(name)) return cookie.substring(name.length + 1);
+			for (let i = 0; i < cookies.length; i++) {
+				if (cookies[i].startsWith(name)) return cookies[i].substring(name.length + 1);
 			}
 			return null;
 		}
