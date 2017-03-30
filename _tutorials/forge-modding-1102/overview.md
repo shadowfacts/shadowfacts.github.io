@@ -36,7 +36,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - mcmod.info
 - [Tile Entities](/tutorials/forge-modding-1102/tile-entities/)
 - [Tile Entities with Inventory](/tutorials/forge-modding-1102/tile-entities-inventory/)
-- Tile Entities with Inventory GUI
+- [Tile Entities with Inventory GUI](/tutorials/forge-modding-1102/tile-entities-inventory-gui/)
 - Dynamic Tile Entity Rendering
 - Advanced GUIs with Widgets
 - Energy API - RF - Items
