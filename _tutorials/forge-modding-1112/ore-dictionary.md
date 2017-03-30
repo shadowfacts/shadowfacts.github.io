@@ -2,8 +2,8 @@
 date: 2016-08-08 11:28:00 -0400
 title: "Ore Dictionary"
 type: 'tutorial'
-series: 'forge-modding-111'
-series-name: 'Making a Forge Mod for 1.11'
+series: 'forge-modding-1112'
+series-name: 'Making a Forge Mod for 1.11.2'
 layout: tutorial
 ---
 

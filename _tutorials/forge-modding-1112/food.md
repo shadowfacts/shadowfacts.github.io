@@ -2,8 +2,8 @@
 date: 2016-08-12 18:04:00 -0400
 title: "Food"
 type: 'tutorial'
-series: 'forge-modding-111'
-series-name: 'Making a Forge Mod for 1.11'
+series: 'forge-modding-1112'
+series-name: 'Making a Forge Mod for 1.11.2'
 layout: tutorial
 ---
 

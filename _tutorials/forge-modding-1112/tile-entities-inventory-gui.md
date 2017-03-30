@@ -2,8 +2,8 @@
 date: 2017-03-29 18:58:42 -0400
 title: "Tile Entities with Inventory GUI"
 type: 'tutorial'
-series: 'forge-modding-111'
-series-name: 'Making a Forge Mod for 1.11'
+series: 'forge-modding-1112'
+series-name: 'Making a Forge Mod for 1.11.2'
 layout: tutorial
 ---
 
@@ -200,8 +200,8 @@ public class GuiPedestal {
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		String name = I18n.format(ModBlocks.pedestal.getUnlocalizedName() + ".name");
-		fontRendererObj.drawString(name, xSize / 2 - fontRendererObj.getStringWidth(name) / 2, 6, 0x404040);
-		fontRendererObj.drawString(playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0x404040);
+		fontRenderer.drawString(name, xSize / 2 - fontRenderer.getStringWidth(name) / 2, 6, 0x404040);
+		fontRenderer.drawString(playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0x404040);
 	}
 }
 {% endhighlight %}

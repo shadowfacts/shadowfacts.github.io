@@ -2,8 +2,8 @@
 date: 2016-09-17 16:53:00 -0400
 title: "Armor"
 type: 'tutorial'
-series: 'forge-modding-111'
-series-name: 'Making a Forge Mod for 1.11'
+series: 'forge-modding-1112'
+series-name: 'Making a Forge Mod for 1.11.2'
 layout: tutorial
 ---
 

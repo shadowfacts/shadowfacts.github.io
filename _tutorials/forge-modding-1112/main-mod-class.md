@@ -2,8 +2,8 @@
 date: 2016-05-07 15:27:00 -0400
 title: "Main Mod Class"
 type: 'tutorial'
-series: 'forge-modding-111'
-series-name: 'Making a Forge Mod for 1.11'
+series: 'forge-modding-1112'
+series-name: 'Making a Forge Mod for 1.11.2'
 layout: tutorial
 ---
 

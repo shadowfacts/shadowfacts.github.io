@@ -2,8 +2,8 @@
 date: 2016-05-29 10:29:00 -0400
 title: "Crops"
 type: 'tutorial'
-series: 'forge-modding-111'
-series-name: 'Making a Forge Mod for 1.11'
+series: 'forge-modding-1112'
+series-name: 'Making a Forge Mod for 1.11.2'
 layout: tutorial
 ---
 

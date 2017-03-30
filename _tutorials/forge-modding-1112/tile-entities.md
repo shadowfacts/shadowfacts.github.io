@@ -2,8 +2,8 @@
 date: 2016-11-27 12:32:42 -0400
 title: "Tile Entities"
 type: 'tutorial'
-series: 'forge-modding-111'
-series-name: 'Making a Forge Mod for 1.11'
+series: 'forge-modding-1112'
+series-name: 'Making a Forge Mod for 1.11.2'
 layout: tutorial
 ---
 
