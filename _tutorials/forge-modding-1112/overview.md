@@ -38,7 +38,7 @@ This series of tutorials teaches modding [Minecraft](https://minecraft.net) vers
 - [Tile Entities](/tutorials/forge-modding-1112/tile-entities/)
 - [Tile Entities with Inventory](/tutorials/forge-modding-1112/tile-entities-inventory/)
 - [Tile Entities with Inventory GUI](/tutorials/forge-modding-1112/tile-entities-inventory-gui/)
-- Dynamic TileEntity Rendering
+- [Dynamic TileEntity Rendering](/tutorials/forge-modding-1112/dynamic-tileentity-rendering/)
 - Advanced GUIs with Widgets
 - Energy API - RF - Items
 - Energy API - RF - Blocks
