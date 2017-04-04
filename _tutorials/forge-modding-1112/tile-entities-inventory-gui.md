@@ -174,7 +174,7 @@ public class GuiPedestal extends GuiContainer {
 		GlStateManager.color(1, 1, 1, 1);
 		mc.getTextureManager().bindTexture(BG_TEXTURE);
 		int x = (width - xSize) / 2;
-		int y = (width - ySize) / 2;
+		int y = (height - ySize) / 2;
 		drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
 	}
 }
