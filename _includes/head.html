@@ -15,22 +15,32 @@
 
 	<script>
 		function getCookie(name) {
-			const cookies = document.cookie.split(";");
+			const cookies = document.cookie.split(";").map(it => it.trim().split("="));
 			for (let i = 0; i < cookies.length; i++) {
-				if (cookies[i].startsWith(name)) return cookies[i].substring(name.length + 1);
+				if (cookies[i][0] == name) {
+					return cookies[i][1];
+				}
 			}
 			return null;
 		}
 		function setCookie(name, val) {
-			const cookies = document.cookie.split(";");
+			const cookies = document.cookie.split(";").map(it => it.trim().split("="));
 			for (let i = 0; i < cookies.length; i++) {
-				if (cookies[i].startsWith(name)) {
-					cookies[i] = `${name}=${val}`;
-					document.cookie = cookies.join(";");
+				if (cookies[i][0] == name) {
+					cookies[i][1] = val;
+					document.cookie = cookies.map(it => it.join("=") + ";").join("");
 					return;
 				}
 			}
-			document.cookie += `${name}=${val};`;
+			document.cookie = `${name}=${val};` + document.cookie;
+		}
+		function removeCookie(name) {
+			document.cookie = document.cookie
+				.split(";")
+				.map(it => it.trim().split("="))
+				.filter(it => it[0] != name)
+				.map(it => it.join("=") + ";")
+				.join("");
 		}
 
 		(() => {
