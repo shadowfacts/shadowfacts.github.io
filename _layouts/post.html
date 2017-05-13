@@ -50,7 +50,10 @@ layout: default
 </div>
 
 {% if page.issue_id != nil %}
-<script>const issueId = "{{ page.issue_id }}";</script>
+<script>
+	"use strict";
+	const issueId = "{{ page.issue_id }}";
+</script>
 <script src="/js/comments.js"></script>
 {% endif %}
 

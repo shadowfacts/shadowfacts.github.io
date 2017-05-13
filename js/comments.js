@@ -1,3 +1,5 @@
+"use strict";
+
 (() => {
 	const headers = new Headers({ "Accept" : "application/vnd.github.v3.html+json" });
 	const token = getCookie("ghtoken");
