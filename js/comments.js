@@ -4,6 +4,7 @@
 	if (token != null) {
 		headers.append("Authorization", `token ${token}`);
 	}
+	const avatarRes = window.devicePixelRatio && window.devicePixelRatio > 1.3 ? 40 : 20;
 	fetch(`https://api.github.com/repos/shadowfacts/shadowfacts.github.io/issues/${issueId}/comments?per_page=100`, { headers: headers })
 		.then(res => res.json())
 		.then(comments => {
@@ -20,7 +21,7 @@
 				`
 				<div class="comment">
 					<div class="comment-details">
-						<img src="${it.user.avatar_url}&s=20" alt="${it.user.login}" class="comment-user-avatar">
+						<img src="${it.user.avatar_url}&s=${avatarRes}" alt="${it.user.login}" class="comment-user-avatar">
 						<p class="comment-info">
 							<a href="${it.user.html_url}" class="comment-user-name">${it.user.login}</a>
 							on
