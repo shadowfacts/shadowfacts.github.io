@@ -455,6 +455,40 @@ article {
 	}
 }
 
+#rpi-progress-bar-container {
+	box-sizing: border-box;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+
+	> .rpi-progress-bar-container__percentage {
+		box-sizing: inherit;
+		position: absolute;
+		bottom: 14px;
+		left: 0;
+		height: 20px;
+		color: black;
+		opacity: 0.3;
+		font-size: 14px;
+		width: auto;
+		min-width: 4em;
+		padding-left: 4px;
+	}
+
+	> .rpi-progress-bar-container__position {
+		box-sizing: inherit;
+		height: 4px;
+		width: 100%;
+		background-color: $siteBlue;
+		transform-origin: 0 50%;
+		transition: transform 50ms;
+		transform: scaleX(0);
+		will-change: transform;
+		position: relative;
+	}
+}
+
 footer {
 	ul {
 		list-style: none;
@@ -597,5 +631,11 @@ footer {
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: 900px) {
+	#rpi-progress-bar-container > .rpi-progress-bar-container__percentage {
+		display: none;
 	}
 }
