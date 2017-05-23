@@ -7,7 +7,7 @@ series-name: 'Making a Forge Mod for 1.11.2'
 layout: tutorial
 ---
 
-Every mod has a main mod class that Forge loads and uses as a starting point when it runs your mod. Before getting started, you'll want to delete all the exist code that comes in the MDK by deleting the `com.example.examplemod` package. For this tutorial, I'll be putting all of the code in the `net.shadowfacts.tutorial` package, so you'll need to create that in your IDE. Next, create a class called `TutorialMod`.
+Every mod has a main mod class that Forge loads and uses as a starting point when it runs your mod. Before getting started, you'll want to delete all the existing code that comes in the MDK by deleting the `com.example.examplemod` package. For this tutorial, I'll be putting all of the code in the `net.shadowfacts.tutorial` package, so you'll need to create that in your IDE. Next, create a class called `TutorialMod`.
 
 {% highlight java linenos %}
 package net.shadowfacts.tutorial;
