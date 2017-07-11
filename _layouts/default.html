@@ -5,6 +5,159 @@
 
 	<body>
 
+		<div id="nn-doa">
+		
+			<button id="nn-doa-close">
+				<svg viewBox="0 0 32 32" width="32" height="32" id="nn-doa-close-icon">
+					<path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
+					<path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
+				</svg>
+			</button>
+
+			<div id="nn-doa-content">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="nn-doa-icon">
+					<path d="M4 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 1c.66 0 1.26.21 1.75.56l-4.19 4.19c-.35-.49-.56-1.09-.56-1.75 0-1.66 1.34-3 3-3zm2.44 1.25c.35.49.56 1.09.56 1.75 0 1.66-1.34 3-3 3-.66 0-1.26-.21-1.75-.56l4.19-4.19z" />
+				</svg>
+				<h1 id="nn-doa-headline">This site has been blocked by your ISP.</h1>
+				<p id="nn-doa-info">Well, not yet. But without net neutrality, cable companies could censor websites, favoring their own business partners. We can stop them and keep the Internet open, fast, and awesome if we all contact congress and the FCC, but we only have a few days left.</p>
+				<section id="nn-doa-contact">
+					<a href="https://www.fcc.gov/ecfs/search/filings?proceedings_name=17-108&amp;sort=date_disseminated,DESC" target="_blank" id="nn-doa-contact-fcc">CONTACT THE FCC</a>
+					<a href="https://democracy.io/" target="_blank" id="nn-doa-contact-congress">CONTACT CONGRESS</a>
+				</section>
+			</div>
+
+			<style>
+				#nn-doa {
+					display: none;
+					width: 100vw;
+					min-height: 100vh;
+					position: fixed;
+					left: 0px;
+					top: 0px;
+					z-index: 1000;
+					background-color: #0E0927;
+					font-family: Arial, sans-serif;
+				}
+				#nn-doa-content {
+					width: 85%;
+					margin: 0 auto;
+					text-align: center;
+				}
+				#nn-doa-close {
+					background: none;
+					border: none;
+					position: absolute;
+					top: 10px;
+					right: 20px;
+				}
+				#nn-doa-close:hover {
+					cursor: pointer;
+				}
+				#nn-doa-close-icon {
+					fill: #EEE;
+				}
+				#nn-doa-icon {
+					width: 200px;
+					height: 200px;
+					fill: #FA2E24;
+					margin: 0 auto;
+					margin-top: 50px;
+					display: block;
+				}
+				#nn-doa-headline {
+					color: #FA2E24;
+					font-size: 5rem;
+					margin-bottom: 0px;
+				}
+				#nn-doa-info {
+					color: white;
+					font-size: 2rem;
+					line-height: 3rem;
+				}
+				#nn-doa-contact > a {
+					display: inline-block;
+					width: 40%;
+					margin: 0 20px;
+					height: 4rem;
+					background-color: #42C8AF;
+					color: white;
+					border: none;
+					border-radius: 5px;
+					font-size: 2rem;
+					line-height: 4rem;
+					text-decoration: none;
+					transition: box-shadow 0.25s;
+				}
+				#nn-doa-contact > a:hover {
+					box-shadow: inset 0 0 5px #0E0927;
+				}
+				@media (max-width: 1050px) {
+					#nn-doa-contact > a {
+						display: block;
+						width: 80%;
+						margin: 20px auto;
+					}
+				}
+				@media (max-width: 550px) {
+					#nn-doa-content {
+						width: 95%;
+					}
+					#nn-doa-icon {
+						width: 150px;
+						height: 150px;
+					}
+					#nn-doa-headline {
+						font-size: 4rem;
+					}
+					#nn-doa-info {
+						font-size: 1.5rem;
+						line-height: 2.5rem;
+					}
+					#nn-doa-contact > a {
+						height: 3rem;
+						font-size: 1.5rem;
+						line-height: 3rem;
+					}
+				}
+				@media (max-width: 400px) {
+					#nn-doa-close {
+						top: 5px;
+						right: 5px;
+					}
+					#nn-doa-icon {
+						width: 100px;
+						height: 100px;
+					}
+					#nn-doa-headline {
+						font-size: 3rem;
+					}
+					#nn-doa-info {
+						font-size: 1rem;
+						line-height: 2rem;
+					}
+					#nn-doa-contact > a {
+						height: 2rem;
+						font-size: 1rem;
+						line-height: 2rem;
+					}
+				}
+			</style>
+
+			<script>
+				"use strict";
+				(() => {
+					if (!localStorage.getItem("nn-doa")) {
+						const el = document.getElementById("nn-doa");
+						el.style.display = "block";
+						document.getElementById("nn-doa-close").onclick = () => {
+							el.style.display = "none";
+							localStorage.setItem("nn-doa", true);
+						};
+					}
+				})();
+			</script>
+		</div>
+
 		<div class="site">
 			
 			<div class="content">

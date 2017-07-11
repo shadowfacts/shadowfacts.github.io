@@ -14,7 +14,7 @@ markdown: kramdown
 
 permalink: /:categories/:year/:month/:day/:title/
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 paginate: 5
 
 collections:
