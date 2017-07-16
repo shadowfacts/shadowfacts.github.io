@@ -416,6 +416,24 @@ public class ClientProxy extends CommonProxy {
 
 We call `bindTileEntitySpecialRenderer` to bind a new instance of our `TESRPedestal` to the `TileEntityPedestal` class. This way, for every instance of the `TileEntityPedestal` class that's in the world, the `renderTileEntityAt` method of our TESR will be called.
 
+Lastly, we'll update our main mod class to call `registerRenderers` on our proxy:
+
+{% highlight java linenos %}
+// ...
+public class TutorialMod {
+	// ...
+
+	@Mod.EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+		// ...
+	
+		proxy.registerRenderers();
+	}
+	
+	// ...
+}
+{% endhighlight %}
+
 ## Finished
 
 Now that we've finally got all the code done, we can launch Minecraft and take a look at how our Pedestals render:

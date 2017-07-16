@@ -2,14 +2,14 @@
 date: 2017-03-30 17:03:42 -0400
 title: "Dynamic TileEntity Rendering"
 type: 'tutorial'
-series: 'forge-modding-1112'
-series-name: 'Making a Forge Mod for 1.11.2'
+series: 'forge-modding-112'
+series-name: 'Making a Forge Mod for 1.12'
 layout: tutorial
 ---
 
 Now that our Pedestal is capable of storing an item and has a GUI with which players can interact, let's add some rendering code so the stored item actually renders in the world.
 
-## Updating the `TileEntity`
+## Updating the Tile Entity
 The first thing we'll need to do is make some modifications to our `TileEntityPedestal` to accomodate the new rendering code.
 
 First off, we'll add a `long` field called `lastChangeTime` to our TE. This field will store the world time, in ticks, of the last time the TE's inventory was modified. This number will be used in our rendering code to make sure that, when the pedestal's item is bobbing up and down (similar to item entities), they're not all synchronized.
@@ -19,7 +19,7 @@ First off, we'll add a `long` field called `lastChangeTime` to our TE. This fiel
 public class TileEntityPedestal extends TileEntity {
 ​	
 	private ItemStackHandler inventory = new ItemStackHandler(1);
-	public long lastChangetime;
+	public long lastChangeTime;
 	
 	// ...
 }
@@ -177,7 +177,7 @@ public class PacketUpdatePedestal implements IMessage {
 }
 {% endhighlight %}
 
-Nextly, we'll add a couple constructors. The first constructor will take parameters for all three fields and assign them as expected. The second one will be a convince constructor that takes a parameter for the `TileEntityPedestal` and calls the first constructor will all the values determined from the TE. The last constructor will take no parameters and won't initialize any of the fields. This is necessary because Forge's SimpleImpl will call it via reflection and then call the `fromBytes` method which will initialize the fields.
+Nextly, we'll add a couple constructors. The first constructor will take parameters for all three fields and assign them as expected. The second one will be a convenience constructor that takes a parameter for the `TileEntityPedestal` and calls the first constructor will all the values determined from the TE. The last constructor will take no parameters and won't initialize any of the fields. This is necessary because Forge's SimpleImpl will call it via reflection and then call the `fromBytes` method which will initialize the fields.
 
 {% highlight java linenos %}
 // ...
@@ -327,14 +327,14 @@ public class TESRPedestal extends TileEntitySpecialRenderer<TileEntityPedestal> 
 }
 {% endhighlight %}
 
-Next, we'll overide the `renderTileEntityAt` method. First, we'll get the stored stack from the tile entity, and then, if the stack isn't empty, setup the GL state, render the stack, and reset the GL state.
+Next, we'll overide the `render` method. First, we'll get the stored stack from the tile entity, and then, if the stack isn't empty, setup the GL state, render the stack, and reset the GL state.
 
 {% highlight java linenos %}
 // ...
 public class TESRPedestal extends TileEntitySpecialRenderer<TileEntityPedestal> {
 
 	@Override
-	public void renderTileEntityAt(TileEntityPedestal te, double x, double y, double z, float partialTicks, int destroyStage) {
+	public void render(TileEntityPedestal te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
 		ItemStack stack = te.inventory.getStackInSlot(0);
 		if (!stack.isEmpty()) {
 			GlStateManager.enableRescaleNormal();
@@ -376,19 +376,19 @@ Nextly, we perform the rotation. For this, we take the total world time and add 
 
 Now, that the GL state is all setup the way we want it, we can actually render the model. We call `getItemModelWithOverrides` on the `RenderItem` instance obtained from `Minecraft.getMinecraft()` with parameters for the `ItemStack` to be rendered, the `World` it'll be rendered in, and `null` for the entity parameter to indicate that there is no entity. This gives the `IBakedModel` instance for the `ItemStack`. 
 
-`IBakedModel` is asort of "compiled" representation of a model. It has all of the data from the JSON model (or another source) compressed down into a list of `BakedQuad`s that can be passed directly to OpenGL to be rendered.
+`IBakedModel` is a sort of "compiled" representation of a model. It has all of the data from the JSON model (or another source) compressed down into a list of `BakedQuad`s that can be passed directly to OpenGL to be rendered.
 
 Now that we've got the `IBakedModel` instance, we call `ForgeHooksClient.handleCameraTransforms` with some parameters: the model that it should handle the transformations for, the type of transformations that should be applied (in this case, `TransformType.GROUND` because on the ground is the closest to what we want because we're rendering it in the world), and `false` for the last parameter because we are not rendering the item in the left hand. 
 
-The `handleCameraTransforms` method handles everything necessary for one of Forge's features: `IPerspectiveAwareModel`. This is an extension of the `IBakedModel` interface which allows the model to be overridden depending on how it's being rendered and provide custom transformations from code. If the model we've gotten from `getItemModelWithOverriddes` is an `IPerspectiveAwareModel`, Forge will call the correct method to get the transformation for the given type (in this case, `GROUND`) and apply those transformations to the current GL state.
+The `handleCameraTransforms` method handles everything necessary for one of Forge's features: perspective-aware models. This is an extension of the `IBakedModel` interface which allows the model to be overridden depending on how it's being rendered and provide custom transformations from code. Forge will apply the transformations returned from `IBakedModel.handlePerspective` for the given type (in this case, `GROUND`).
 
 Now that we've got the model, we call `bindTexture` on the `TextureManager` instance obtained from `Minecraft.getMinecraft().getTextureManager()` with the ID of the texture we want to bind. In this case, because we want to be bind the main texture map which contains all of the textures that are used in the models, we use the ID `TextureMap.LOCATION_BLOCKS_TEXTURE`. This field name is a bit of a misnomer because it's not just for blocks, it stores the textures for items as well.
 
-With the texture map boudn, we can finally render the item itself. We call `renderItem` with the `ItemStack` we're rendering and the `IBakedModel` to render on the `RenderItem` instance. 
+With the texture map bound, we can finally render the item itself. We call `renderItem` with the `ItemStack` we're rendering and the `IBakedModel` to render on the `RenderItem` instance. 
 
 Once we've finished rendering, we reset the GL state back to what it was before our TESR started rendering.
 
-Lastly, we'll need to register our TESR. Let's create a new method in our proxiescalled `registerRenderers`. In our `CommonProxy` this method won't do anything because we only want to register our renderers on the client side. In our `ClientProxy` we'll bind our TESR to our tile entity so that it gets rendered.
+Lastly, we'll need to register our TESR. Let's create a new method in our proxies called `registerRenderers`. In our `CommonProxy` this method won't do anything because we only want to register our renderers on the client side. In our `ClientProxy` we'll bind our TESR to our tile entity so that it gets rendered.
 
 {% highlight java linenos %}
 // ...
