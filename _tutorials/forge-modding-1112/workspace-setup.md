@@ -14,7 +14,7 @@ This series does not cover learning Java or installing the JDK. You should have 
 I will be using [IntelliJ IDEA](https://jetbrains.com/idea/) throughout this series as it is my IDE of choice. You can download the free community version of IDEA [here](https://www.jetbrains.com/idea/). It is possible to use [Eclipse](https://www.eclipse.org/) if you prefer.
 
 ### Forge MDK
-From the [Forge files site](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.10.2.html), download the latest MDK for 1.10.2. (Click the button with the floppy disk icon labeled `MDK` on the left.) After download, unzip the MDK to a new folder wherever you like. After unzipping the MDK, we can delete a number of extraneous files that are part of the MDK. You can delete every file in the folder thats not one of these:
+From the [Forge files site](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.11.2.html), download the latest MDK for 1.10.2. (Click the button with the floppy disk icon labeled `MDK` on the left.) After download, unzip the MDK to a new folder wherever you like. After unzipping the MDK, we can delete a number of extraneous files that are part of the MDK. You can delete every file in the folder thats not one of these:
 
 - `src/`
 - `build.gradle`
