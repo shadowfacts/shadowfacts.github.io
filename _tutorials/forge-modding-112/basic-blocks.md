@@ -34,7 +34,7 @@ public class BlockBase extends Block {
 		setRegistryName(name);
 	}
 	
-	public void registerItemModel(ItemBlock itemBlock) {
+	public void registerItemModel(Item itemBlock) {
 		TutorialMod.proxy.registerItemRenderer(itemBlock, 0, name);
 	}
 	
