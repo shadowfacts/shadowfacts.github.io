@@ -9,7 +9,7 @@ layout: tutorial
 
 We've got our copper ore block, but it doesn't generate in the world so it's not very useful to players. Let's fix that.
 
-The first thing we'll need to do is create a class called `ModWorldGeneration` in the `world` sub-package in our mod. This class will implement Forge's `IWorldGenerator` interface which is used to hook into Minecraft's world generation.
+The first thing we'll need to do is create a class called `ModWorldGen` in the `world` sub-package in our mod. This class will implement Forge's `IWorldGenerator` interface which is used to hook into Minecraft's world generation.
 
 {% highlight java linenos %}
 package net.shadowfacts.tutorial.world;
@@ -94,7 +94,7 @@ This method does a couple of things:
 4. Calls the `generate` method on it to generate our ore in the world.
 5. Repeats steps 2 through 4 `chances` times.
 
-This results in our ore being generated `chanes` times per chunk with each chance having a different position inside the chunk and in between the specificed Y values.
+This results in our ore being generated `chances` times per chunk with each chance having a different position inside the chunk and in between the specified Y values.
 
 {% highlight java linenos %}
 // ...
@@ -118,7 +118,7 @@ We call the `generateOre` method with:
 1. The block state we want to generate (the default block state of our copper ore block).
 2. The world we want generate in (the `World` we've been passed).
 3. The random we want to use to generate (the `Random` we've been passed).
-4. The X position we want to generate at (the `chunkX` value multipled by 16, because chunks are 16x16).
+4. The X position we want to generate at (the `chunkX` value multiplied by 16, because chunks are 16x16).
 5. The Z position we want to generate at (the `chunkZ` value multiplied by 16, because chunks are 16x16).
 6. The minimum Y position we want to generate at (16).
 7. The maximum Y position we want to generate at (64).
@@ -141,7 +141,7 @@ public class TutorialMod {
 
 The `int` parameter of `GameRegistry.registerWorldGenerator` is the weight of our mod's world generator. This usually doens't matter, however, if you're experiencing issues with other mods interfering with your world generation, you may want to change this.
 
-Now, if you create a new world and search around for a bit, you'll bet able to find a deposit of our Copper Ore!
+Now, if you create a new world and search around for a bit, you'll be able to find a deposit of our Copper Ore!
 
 You may want to play around with the vein size and chances settings until you achieve the desired concentration of ore per chunk.
 
