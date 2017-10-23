@@ -55,10 +55,10 @@ public abstract class BlockTileEntity<TE extends TileEntity> extends BlockBase {
 }
 {% endhighlight %}
 
-Our `BockTileEntity` class wil provide a couple of things:
+Our `BockTileEntity` class will provide a couple of things:
 
 1. It will extend `BlockBase` so we still have access to all our existing helpers.
-2. It will have a generic parameter `TE` which will be the type of our tile entity class. This will be used to create a simple helper method to reduce the numebr of casts necessary to obtain the instance of our tile entity for a specific position in the world and to ensure that the `TileEntity` we create is of the correct type for our block instance.
+2. It will have a generic parameter `TE` which will be the type of our tile entity class. This will be used to create a simple helper method to reduce the number of casts necessary to obtain the instance of our tile entity for a specific position in the world and to ensure that the `TileEntity` we create is of the correct type for our block instance.
 3. It will override the `hasTileEntity(IBlockState)` method from Minecraft's `Block` class to return `true`. This will tell Minecraft that our block has a tile entity associated with it that needs to be created.
 4. It will have two abstract methods:
    1. `getTileEntityClass`: From here, we'll return the `Class` that our tile entity is so it can automatically be registered when our block is registered.
@@ -149,7 +149,7 @@ Our block class will extend `BlockTileEntity` and have a generic parameter of `T
 
 In the constructor, we'll simply call the super constructor with the material `ROCK` and the name `"counter"`. 
 
-In the `getTileEntityClass` method, we'll return `TileEntityCounter.class` (this wil cause an error, but don't worry, we haven't created this class yet). This will allow our `ModBlocks` class to automatically register our `TileEntityCounter.class` to the name `tutorial:counter`.
+In the `getTileEntityClass` method, we'll return `TileEntityCounter.class` (this will cause an error, but don't worry, we haven't created this class yet). This will allow our `ModBlocks` class to automatically register our `TileEntityCounter.class` to the name `tutorial:counter`.
 
 In the `createTileEntity` class, we'll simply return a new instance of our `TileEntityCounter ` class.
 
@@ -170,7 +170,7 @@ Lastly, and most importantly, in the `onBlockActivated`  method, which is called
 
 As I mentioned above, before we modify the counter, we check that we're on the server. We need to do this because the Minecraft client and the server are completely separated and some methods are called on both.
 
-In a multiplayer scenario, there are multiple clients connect to one server. In this case, the distinction between client and server is fairly obvious, but in a single player scenario, things get more complicated. In a multiplayer scenario, the servger that everybody's connecting to is referred to as the **physical server** and all of the individual clients are the **physical clients**.
+In a multiplayer scenario, there are multiple clients connect to one server. In this case, the distinction between client and server is fairly obvious, but in a single player scenario, things get more complicated. In a multiplayer scenario, the server that everybody's connecting to is referred to as the **physical server** and all of the individual clients are the **physical clients**.
 
 In a single player world, the client and the server are still decoupled, even though they are running on the same computer (and even in the same JVM, just on different threads). In singleplayer, the client connects to a local, private server that functions very similarly to a physical server. In this case, the server thread is referred to as the **logical server** and the client thread as the **logical client** because both logical sides are running on the same physical side.
 
@@ -182,7 +182,7 @@ If you want to know more about sides in Minecraft and how they work, you can see
 
 Now that our block is finished, we can finally create the tile entity itself.
 
-We'll create a new class called `TileEntityCounter` which will also reside in the `block.counter` package of our mod (this is my preferred package structure, however, many people also prefer to have all the tile entity classes reside in a separete `tileentity` package and the block classes reside in the `block` package).
+We'll create a new class called `TileEntityCounter` which will also reside in the `block.counter` package of our mod (this is my preferred package structure, however, many people also prefer to have all the tile entity classes reside in a separate `tileentity` package and the block classes reside in the `block` package).
 
 {% highlight java linenos %}
 package net.shadowfacts.tutorial.block.counter;
@@ -230,7 +230,7 @@ Our `TileEntityCounter` class is fairly simple. It will:
 - Override the `writeToNBT` and `readFromNBT` methods so Minecraft is able to properly save and load it from the disk.
 - Provide `getCount`, `incrementCount`, and `decrementCount` methods for accessing and modifying the value of the field.
 
-Additionally, in the `incrementCount` and `decrementCount` methods, we call the `markDirty` method from the Vanilla `TilEntity` class. This method call tells Mincraft that our TE has changed since it was last saved to disk and therefore must be re-saved.
+Additionally, in the `incrementCount` and `decrementCount` methods, we call the `markDirty` method from the Vanilla `TilEntity` class. This method call tells Minecraft that our TE has changed since it was last saved to disk and therefore must be re-saved.
 
 ### The NBT (Named Binary Tag) Format
 

@@ -276,7 +276,7 @@ public Object getClientGuiElement(int ID, EntityPlayer player, World world, int 
 }
 {% endhighlight %}
 
-Similarly to the `getServerGuiElement` method, we switch on the ID, and if it's the pedestal's, we return a new instance of `GuiPedestal` with a new container intance and the player's inventory. 
+Similarly to the `getServerGuiElement` method, we switch on the ID, and if it's the pedestal's, we return a new instance of `GuiPedestal` with a new container instance and the player's inventory. 
 
 Finally, we need to register our GUI handler.
 

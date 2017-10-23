@@ -269,7 +269,7 @@ In the `ItemShovel` constructor, we'll:
 - Set the unlocalized and registry names
 - Store the name to be used for item model registration
 
-We'll also need to implement `registerItemModel` and register a item model for our shovel.
+We'll also need to implement `registerItemModel` and register an item model for our shovel.
 
 {% highlight java linenos %}
 package net.shadowfacts.tutorial.item.tool;

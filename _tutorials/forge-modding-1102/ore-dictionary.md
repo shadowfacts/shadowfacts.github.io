@@ -109,7 +109,7 @@ public class ModItems {
 }
 {% endhighlight %}
 
-We'll do this similarly in the `ModBlocks` class excpet we'll check `instanceof ItemOreDict` and call `initOreDict` on both the block itself and the associated `ItemBlock`.
+We'll do this similarly in the `ModBlocks` class except we'll check `instanceof ItemOreDict` and call `initOreDict` on both the block itself and the associated `ItemBlock`.
 
 {% highlight java linenos %}
 // ...
@@ -167,9 +167,9 @@ public class ModItems {
 {% endhighlight %}
 
 ## Recipes
-Now that we've got ore dictionary names for some of our items and blocks, let's add recipes that utilize them. Forge adds the `ShapedOreRecipe` and `ShapelessOreRecipe` classes that are identical to the vanilla shaped and shapless recipes, except instead of just accepting an item/block/stack for the input, they can also accept a string of an ore dictionary name that will match anything with that given name.
+Now that we've got ore dictionary names for some of our items and blocks, let's add recipes that utilize them. Forge adds the `ShapedOreRecipe` and `ShapelessOreRecipe` classes that are identical to the vanilla shaped and shapeless recipes, except instead of just accepting an item/block/stack for the input, they can also accept a string of an ore dictionary name that will match anything with that given name.
 
-These recipes need to be instantiated manually and registered using `GameRegistry.addRecipe` unlike normal shaped/shapeless recipes which have convienience methods in `GameRegistry`.
+These recipes need to be instantiated manually and registered using `GameRegistry.addRecipe` unlike normal shaped/shapeless recipes which have convenience methods in `GameRegistry`.
 
 {% highlight java linenos %}
 // ...

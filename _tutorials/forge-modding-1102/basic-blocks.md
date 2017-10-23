@@ -47,7 +47,7 @@ public class BlockBase extends Block {
 }
 {% endhighlight %}
 
-This is almost exactly the same as our `ItemBase` class except it extends `Block` instead of `Item`. It sets the unlocalized and registry names, has a method to register the item model, and has an overriden version of `Block#setCreativeTab` that returns a `BlockBase`.
+This is almost exactly the same as our `ItemBase` class except it extends `Block` instead of `Item`. It sets the unlocalized and registry names, has a method to register the item model, and has an overridden version of `Block#setCreativeTab` that returns a `BlockBase`.
 
 We'll also create a `BlockOre` class which extends `BlockBase` to make adding ore's a little easier.
 

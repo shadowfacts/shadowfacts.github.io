@@ -51,7 +51,7 @@ Lastly, we'll need to make one change in our main `TutorialMod` class. Due to th
 ## Crop
 The crop we are going to create will be corn.
 
-As I mentioned before, our crop will be divded into 3 main parts:
+As I mentioned before, our crop will be divided into 3 main parts:
 
 1. The crop block (corn crop)
 2. The seed item (corn seed)

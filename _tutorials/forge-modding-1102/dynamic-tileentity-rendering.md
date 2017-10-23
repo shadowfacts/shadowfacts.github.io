@@ -10,7 +10,7 @@ layout: tutorial
 Now that our Pedestal is capable of storing an item and has a GUI with which players can interact, let's add some rendering code so the stored item actually renders in the world.
 
 ## Updating the `TileEntity`
-The first thing we'll need to do is make some modifications to our `TileEntityPedestal` to accomodate the new rendering code.
+The first thing we'll need to do is make some modifications to our `TileEntityPedestal` to accommodate the new rendering code.
 
 First off, we'll add a `long` field called `lastChangeTime` to our TE. This field will store the world time, in ticks, of the last time the TE's inventory was modified. This number will be used in our rendering code to make sure that, when the pedestal's item is bobbing up and down (similar to item entities), they're not all synchronized.
 
@@ -226,7 +226,7 @@ public class PacketUpdatePedestal implements IMessage {
 
 First, we use `BlockPos`' `toLong` and `fromLong` to serialize that, then we use the helper methods in `ByteBufUtils` to serialize the stack, and lastly we write the `lastChangeTime`. Note that we're reading/writing things in the same order in both these methods. This is very important, and if something's out of order, we'll end up getting the wrong data  when our packet is received.
 
-Lastly, we'll add the handler. Let's create a static inner `Handler` class in our `PacketUpdatePedestal` class that implements `IMessageHandler`. This interface takes two generic type paramters: the type of the packet that the handler's handling and the type of the packet that the handler responds with. The first type will obviously be `PacketUpdatePedestal` and, because we don't want to respond with a packet, the return packet type will just be `IMessage` and we'll return `null` from the handler method.
+Lastly, we'll add the handler. Let's create a static inner `Handler` class in our `PacketUpdatePedestal` class that implements `IMessageHandler`. This interface takes two generic type parameters: the type of the packet that the handler's handling and the type of the packet that the handler responds with. The first type will obviously be `PacketUpdatePedestal` and, because we don't want to respond with a packet, the return packet type will just be `IMessage` and we'll return `null` from the handler method.
 
 What we're going to do in the handler's `onMessage` method is get the tile entity from the world and update its inventory and `lastChangeTime`. Unfortunately, there's a caveat to this so it's a bit more complicated. With Netty (the library Minecraft and Forge use for networking), packets are handled on a different thread that's not the main thread. Because we're going to be interacting with and modifying the world, we can't just do it from a different thread because it could potentially cause a `ConcurrentModificationException` to be thrown. To deal with this, we'll call the `Minecraft.addScheduledTask` method which executes the given `Runnable` on the main thread as soon as possible, so in this runnable, we _can_ interact with the world.
 
@@ -315,7 +315,7 @@ public class PacketRequestUpdatePedestal implements IMessage {
 
 Now that we've updated the tile entity and finished all the networking code, we can finally write the renderer itself.
 
-Let's create a class called `TESRPedestal` in our `block.pedestal` package that extends `TileEntitySpecialRenderer`. The generic type paramter is the type of our tile entity, so we'll use `TileEntityPedestal`.
+Let's create a class called `TESRPedestal` in our `block.pedestal` package that extends `TileEntitySpecialRenderer`. The generic type parameter is the type of our tile entity, so we'll use `TileEntityPedestal`.
 
 {% highlight java linenos %}
 package net.shadowfacts.tutorial.block.pedestal;
@@ -327,7 +327,7 @@ public class TESRPedestal extends TileEntitySpecialRenderer<TileEntityPedestal> 
 }
 {% endhighlight %}
 
-Next, we'll overide the `renderTileEntityAt` method. First, we'll get the stored stack from the tile entity, and then, if the stack isn't `null`, setup the GL state, render the stack, and reset the GL state.
+Next, we'll override the `renderTileEntityAt` method. First, we'll get the stored stack from the tile entity, and then, if the stack isn't `null`, setup the GL state, render the stack, and reset the GL state.
 
 {% highlight java linenos %}
 // ...
@@ -364,7 +364,7 @@ public class TESRPedestal extends TileEntitySpecialRenderer<TileEntityPedestal> 
 
 After setting up the GL state (lighting, blending, etc.), we perform the translation (`GlStateManager.translate`) and rotation (`GlStateManager.rotate`). 
 
-There are two parts to the translation: we translate it to `x + 0.5`, `y + 1.25`, and `z + 0.5` which is above the center of our block, on top of the pedestal. The second part is the part that changes: the `offset` in the `y` value. The offset is the height of the item for any given frame. We recalculate this each time because we want it ot be animating bouncing up and down. We calculate this by:
+There are two parts to the translation: we translate it to `x + 0.5`, `y + 1.25`, and `z + 0.5` which is above the center of our block, on top of the pedestal. The second part is the part that changes: the `offset` in the `y` value. The offset is the height of the item for any given frame. We recalculate this each time because we want it to be animating bouncing up and down. We calculate this by:
 
 1. Taking the time (in ticks) since the pedestal was modified by subtracting the `lastChangeTime` from the current total world time.
 2. Adding the partial ticks. (The partial ticks is a fractional value representing the amount of time that's passed between the last full tick and now. We use this because otherwise the animation would be jittery because there are fewer ticks per second than frames per second.)
@@ -376,7 +376,7 @@ Nextly, we perform the rotation. For this, we take the total world time and add 
 
 Now, that the GL state is all setup the way we want it, we can actually render the model. We call `getItemModelWithOverrides` on the `RenderItem` instance obtained from `Minecraft.getMinecraft()` with parameters for the `ItemStack` to be rendered, the `World` it'll be rendered in, and `null` for the entity parameter to indicate that there is no entity. This gives the `IBakedModel` instance for the `ItemStack`. 
 
-`IBakedModel` is asort of "compiled" representation of a model. It has all of the data from the JSON model (or another source) compressed down into a list of `BakedQuad`s that can be passed directly to OpenGL to be rendered.
+`IBakedModel` is a sort of "compiled" representation of a model. It has all of the data from the JSON model (or another source) compressed down into a list of `BakedQuad`s that can be passed directly to OpenGL to be rendered.
 
 Now that we've got the `IBakedModel` instance, we call `ForgeHooksClient.handleCameraTransforms` with some parameters: the model that it should handle the transformations for, the type of transformations that should be applied (in this case, `TransformType.GROUND` because on the ground is the closest to what we want because we're rendering it in the world), and `false` for the last parameter because we are not rendering the item in the left hand. 
 
@@ -384,11 +384,11 @@ The `handleCameraTransforms` method handles everything necessary for one of Forg
 
 Now that we've got the model, we call `bindTexture` on the `TextureManager` instance obtained from `Minecraft.getMinecraft().getTextureManager()` with the ID of the texture we want to bind. In this case, because we want to be bind the main texture map which contains all of the textures that are used in the models, we use the ID `TextureMap.LOCATION_BLOCKS_TEXTURE`. This field name is a bit of a misnomer because it's not just for blocks, it stores the textures for items as well.
 
-With the texture map boudn, we can finally render the item itself. We call `renderItem` with the `ItemStack` we're rendering and the `IBakedModel` to render on the `RenderItem` instance. 
+With the texture map bound, we can finally render the item itself. We call `renderItem` with the `ItemStack` we're rendering and the `IBakedModel` to render on the `RenderItem` instance. 
 
 Once we've finished rendering, we reset the GL state back to what it was before our TESR started rendering.
 
-Lastly, we'll need to register our TESR. Let's create a new method in our proxiescalled `registerRenderers`. In our `CommonProxy` this method won't do anything because we only want to register our renderers on the client side. In our `ClientProxy` we'll bind our TESR to our tile entity so that it gets rendered.
+Lastly, we'll need to register our TESR. Let's create a new method in our proxies called `registerRenderers`. In our `CommonProxy` this method won't do anything because we only want to register our renderers on the client side. In our `ClientProxy` we'll bind our TESR to our tile entity so that it gets rendered.
 
 {% highlight java linenos %}
 // ...

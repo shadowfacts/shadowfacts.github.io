@@ -35,7 +35,7 @@ public class BlockPedestal extends BlockTileEntity<TileEntityPedestal> {
 }
 {% endhighlight %}
 
-From the `getTileEntityClass` method, we'll return `TileEntityPedestal.class` (this will cause errors because we haven't creeated the tile entity class yet) and from the `createTileEntity` method, we'll return a new instance of the `TileEntityPedestal` class.
+From the `getTileEntityClass` method, we'll return `TileEntityPedestal.class` (this will cause errors because we haven't created the tile entity class yet) and from the `createTileEntity` method, we'll return a new instance of the `TileEntityPedestal` class.
 
 Next, we'll add the `onBlockActivated` method which will handle our block being right-clicked. The logic for this method will be something like this:
 
@@ -91,7 +91,7 @@ public class BlockPedestal extends BlockTileEntity<TileEntityPedestal> {
 }
 {% endhighlight %}
 
-The `IItemHandler` and capability stuff might look a bit confusing, but that's ok, it will be explained in more detail later on. For now, suffice it to say that the `IItemHandler` is the object that stores the pedestal's inventory.
+The `IItemHandler` and capability stuff might look a bit confusing, but that's okay, it will be explained in more detail later on. For now, suffice it to say that the `IItemHandler` is the object that stores the pedestal's inventory.
 
 Before we can continue, we'll also need to add a new method to our proxy class. This method will take an unlocalized name (e.g. `item.diamond.name`) and translate it into the correct version (e.g. `Diamond`). This needs to be a method in our proxy class because there are two different ways of localizing things depending if you're on the client or the server. If you're on the server, you need to use `net.minecraft.util.text.translation.I18n` whereas if you're on the client, you need to use `net.minecraft.client.resources.I18n`. In our `CommonProxy` class, we'll add the server-side version of this:
 
@@ -167,7 +167,7 @@ Like in the previous tutorial, the tile entity class itself will be fairly simpl
 
 ### Capabilities
 
-Forge provides a simple Entity Component System called capabilities. Capabilities allow mod developers to easily add/use functionality without having to implement lots of interfaces or perform lots of `instanceof` checks and casts. In this tutorial we'll use the Forge-provided `IItemHandler` capability which is a replacement for Vanilla's `IInventory` and `ISidedInventory`. We'll be using the `ItemStackHandler` implementation of the `IItemHandler` interface which is provided by Forge. By overriding the `hasCapability` and `getCapability` methods of our tile entity, we can "regster" the capabilty object and make it accessible to everyone else.
+Forge provides a simple Entity Component System called capabilities. Capabilities allow mod developers to easily add/use functionality without having to implement lots of interfaces or perform lots of `instanceof` checks and casts. In this tutorial we'll use the Forge-provided `IItemHandler` capability which is a replacement for Vanilla's `IInventory` and `ISidedInventory`. We'll be using the `ItemStackHandler` implementation of the `IItemHandler` interface which is provided by Forge. By overriding the `hasCapability` and `getCapability` methods of our tile entity, we can "register" the capability object and make it accessible to everyone else.
 
 1. `insertItem`: This method takes 3 parameters: `int slot`, `ItemStack stack`, and `boolean simulate` and returns an `ItemStack`.
    1. `int slot`: The index of the slot in the inventory that we want to insert into.
@@ -230,7 +230,7 @@ In our tile entity, we'll have a `private ItemStackHandler inventory` field whic
 
 Lastly, we'll override the `hasCapability` and `getCapability` methods. In `hasCapability` we'll return if the capability being tested is the `IItemHandler` capability instance, or if it's provided by the super method*. Likewise, in the `getCapability` method, we'll check if the capability being requested is the `IItemHandler` capability and if so, return our `inventory`, and otherwise, delegate to the super method\*.
 
-*: We delegate back to the super method because Forge provides an `AttachCapabilitiesEvent` which allows other mods to add capabilites to tile entities and other objects that they don't own.
+*: We delegate back to the super method because Forge provides an `AttachCapabilitiesEvent` which allows other mods to add capabilities to tile entities and other objects that they don't own.
 
 ## Finished
 

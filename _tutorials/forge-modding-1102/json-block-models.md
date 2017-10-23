@@ -9,13 +9,13 @@ layout: tutorial
 
 We're going to add a new block that has a custom JSON model (that is, one defined completely by us, not one of Mojang's). 
 
-The first thing we'll need to do is create a block class. We need to create a new class instead of just using the `BlockBase` class because w'll need to override a couple of methods to have the model render properly. Our `BlockPedestal` class will extend our `BlockBase` class so we can use the code we've already written for item model registration.
+The first thing we'll need to do is create a block class. We need to create a new class instead of just using the `BlockBase` class because we'll need to override a couple of methods to have the model render properly. Our `BlockPedestal` class will extend our `BlockBase` class so we can use the code we've already written for item model registration.
 
 The two methods we'll be override are `isOpaqueCube` and `isFullCube`. In both of these methods, we'll want to return false from both of these methods in order to change some of the default Minecraft behavior. 
 
 `isOpaqueCube` is used to determine if this block should cull faces of the adjacent block. Since our block doesn't take up the entirety of the 1m^3 cube, we'll want to return `false` so the faces of adjacent blocks can be seen behind our block.
 
-`isFullCube` is used to determine if light should pass through the block. Once again, we'll want to return `false` because our block is less than 1m^3 so we'll want light to propgate through it.
+`isFullCube` is used to determine if light should pass through the block. Once again, we'll want to return `false` because our block is less than 1m^3 so we'll want light to propagate through it.
 
 {% highlight java linenos %}
 package net.shadowfacts.tutorial.block;
@@ -196,13 +196,13 @@ The `elements` section is an array of the elements in the model.
 Each element has 3 properties:
 
 1. `from`: This is the bottom/left/backmost point of the element.
-2. `to`: This is the top/right/frontmost point of the elemnt. With the `from` property, this is used to determine the size of the element.
-3. `faces`: This is an object containg a map of directions to faces. All the faces are optional. 
+2. `to`: This is the top/right/frontmost point of the element. With the `from` property, this is used to determine the size of the element.
+3. `faces`: This is an object containing a map of directions to faces. All the faces are optional. 
 
 Each face has several properties:
 
 1. `texture`: This is the texture to use for the face. This can be a reference to a predefined texture (e.g. `#pedestal`) or a direct reference (e.g. `blocks/stonebrick`).
-2. `uv`: This is an array of 4 integer elements representing the minimum U, mimumin V, maximum U, and maximum V (in that order).
+2. `uv`: This is an array of 4 integer elements representing the minimum U, minimum V, maximum U, and maximum V (in that order).
 3. `cullface`: This is optional. If specified, this face will be culled if there is a solid block against the specified face of the block.
 
 ![Finished Pedestal Model](http://i.imgur.com/Axt5iiE.png)

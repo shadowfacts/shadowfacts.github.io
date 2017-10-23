@@ -139,7 +139,7 @@ public class TutorialMod {
 }
 {% endhighlight %}
 
-The `int` parameter of `GameRegistry.registerWorldGenerator` is the weight of our mod's world generator. This usually doens't matter, however, if you're experiencing issues with other mods interfering with your world generation, you may want to change this.
+The `int` parameter of `GameRegistry.registerWorldGenerator` is the weight of our mod's world generator. This usually doesn't matter, however, if you're experiencing issues with other mods interfering with your world generation, you may want to change this.
 
 Now, if you create a new world and search around for a bit, you'll be able to find a deposit of our Copper Ore!
 
