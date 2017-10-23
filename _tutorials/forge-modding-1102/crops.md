@@ -208,7 +208,7 @@ public static void init() {
 // ...
 {% endhighlight %}
 
-Lastly, we'll create a simple JSON model for the corn seed. First you'll want to download the texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/cornSeed.png) and save it to `src/main/resources/assets/tutorial/textures/items/cornSeed.png`. Now create a JSON file in the `models/item` folder called `cornSeed.json`. This model with be fairly similar to our copper ingot model, it will just have a parent of `item/generated` and a layer 0 texture of `tutorial:items/cornSeed`.
+Lastly, we'll create a simple JSON model for the corn seed. First you'll want to download the texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/cornSeed.png) and save it to `src/main/resources/assets/tutorial/textures/items/cornSeed.png`. Now create a JSON file in the `models/item` folder called `cornSeed.json`. This model with be fairly similar to our copper ingot model, it will just have a parent of `item/generated` and a layer 0 texture of `tutorial:items/cornSeed`.
 
 {% highlight json linenos %}
 {
@@ -233,7 +233,7 @@ public static void init() {
 // ...
 {% endhighlight %}
 
-Now let's also make a simple model for our corn item. Download the texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/corn.png) and save it as `corn.png` in the `textures/items` folder. Now let's create a `corn.json` file for our model. This model will also be very simple, with a parent of `item/generated` and a layer 0 texture of `tutorial:items/corn`.
+Now let's also make a simple model for our corn item. Download the texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/corn.png) and save it as `corn.png` in the `textures/items` folder. Now let's create a `corn.json` file for our model. This model will also be very simple, with a parent of `item/generated` and a layer 0 texture of `tutorial:items/corn`.
 
 {% highlight json linenos %}
 {

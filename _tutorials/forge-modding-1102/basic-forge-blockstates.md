@@ -34,6 +34,6 @@ Now that we've got our copper ore block, let's add a simple blockstate to give i
 - `variants` (L8-L15): Inside of this block are where all of our individual variants go. Because we don't have any custom block properties, we have the `normal` variant which is the normal, in-world variant. The `inventory` variant is used when rendering our item in inventory and in the player's hand.
 - `"model": "cube_all"` (L10 & L13): This uses the `cube_all` model for both variants. This is a simple model included in Minecraft which uses the same `#all` texture for every side of the block. We can't include this in the `defaults` block because Forge expects there to be at least one thing in each variant block.
 
-Now, we just need to download the [copper ore texture](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/blocks/oreCopper.png) to `src/main/resources/assets/tutorial/textures/blocks/oreCopper.png` and we're all set!
+Now, we just need to download the [copper ore texture](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/blocks/oreCopper.png) to `src/main/resources/assets/tutorial/textures/blocks/oreCopper.png` and we're all set!
 
 ![Textured Copper Ore Screenshot](http://i.imgur.com/wJ1iJUg.png)

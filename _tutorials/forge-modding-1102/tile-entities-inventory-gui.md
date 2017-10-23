@@ -154,7 +154,7 @@ public class GuiPedestal extends GuiContainer {
 }
 {% endhighlight %}
 
-You can download the texture for the pedestal GUI [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/519b5e5265c6203997d9f378ec5eaccbc33a6870/src/main/resources/assets/tutorial/textures/gui/pedestal.png). You'll want to save it to `src/main/resources/assets/tutorial/textures/gui/pedestal.png`.
+You can download the texture for the pedestal GUI [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/gui/pedestal.png). You'll want to save it to `src/main/resources/assets/tutorial/textures/gui/pedestal.png`.
 
 
 

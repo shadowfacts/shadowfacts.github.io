@@ -57,7 +57,7 @@ By passing a different string into `setBackgroundImageName` and adding the textu
 
 In our constructor, let's call `setBackgroundImageName` with `"tutorialmod.png"`. This will tell Minecraft to look for the texture at `assets/minecraft/textures/gui/container/creative_inventory/tab_tutorialmod.png`
 
-Download [this](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/minecraft/textures/gui/container/creative_inventory/tab_tutorialmod.png) texture and save it to `src/main/resources/assets/minecraft/textures/gui/container/creative_inventory/tab_tutorialmod.png` in your mod folder.
+Download [this](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/minecraft/textures/gui/container/creative_inventory/tab_tutorialmod.png) texture and save it to `src/main/resources/assets/minecraft/textures/gui/container/creative_inventory/tab_tutorialmod.png` in your mod folder.
 
 That's it! When you open up the creative tab, you should now see our nice custom texture!
 
