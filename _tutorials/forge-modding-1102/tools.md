@@ -92,7 +92,7 @@ We'll also create our JSON item model at `assets/tutorial/models/item/copperSwor
 }
 {% endhighlight %}
 
-We'll also need the texture, which you can download [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperSword.png).
+We'll also need the texture, which you can download [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/copperSword.png).
 
 And lastly, we'll add a localization entry for the sword.
 
@@ -168,7 +168,7 @@ We'll create a JSON model for our item at `assets/tutorial/models/item/copperPic
 }
 {% endhighlight %}
 
-You can download the texture for the copper pickaxe [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperPickaxe.png).
+You can download the texture for the copper pickaxe [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/copperPickaxe.png).
 
 Lastly, we'll need a localization entry for the pick.
 
@@ -248,7 +248,7 @@ Our model will have a parent of `item/handheld` instead of `item/generated` so i
 }
 {% endhighlight %}
 
-You can download the texture for the copper axe [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperAxe.png).
+You can download the texture for the copper axe [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/copperAxe.png).
 
 Lastly, we'll need a localization entry for our axe.
 
@@ -269,7 +269,7 @@ In the `ItemShovel` constructor, we'll:
 - Set the unlocalized and registry names
 - Store the name to be used for item model registration
 
-We'll also need to implement `registerItemModel` and register a item model for our shovel.
+We'll also need to implement `registerItemModel` and register an item model for our shovel.
 
 {% highlight java linenos %}
 package net.shadowfacts.tutorial.item.tool;
@@ -325,7 +325,7 @@ Next, we'll create a JSON item model for our shovel at `assets/tutorial/models/i
 }
 {% endhighlight %}
 
-You can download the texture for our shovel [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperShovel.png).
+You can download the texture for our shovel [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/copperShovel.png).
 
 We'll also need a localization entry for our shovel.
 
@@ -401,7 +401,7 @@ Next, we'll create a JSON item model for our hoe at `assets/tutorial/models/item
 }
 {% endhighlight %}
 
-You can download the copper hoe texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperHoe.png).
+You can download the copper hoe texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/copperHoe.png).
 
 Lastly, we'll need a localization entry for our hoe.
 

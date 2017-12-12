@@ -30,7 +30,7 @@ public class TutorialMod {
 - `0.0F`: The toughness of the armor.
 
 Next we'll need the textures for the armor material that are used to render the on-player overlay.
-Download the layer 1 texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/models/armor/copper_layer_1.png) and save it to `src/main/resources/assets/tutorial/textures/model/armor/copper_layer_1.png`. Download the layer 2 texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/models/armor/copper_layer_2.png) and save it to `src/main/resources/assets/tutorial/textures/models/armor/copper_layer_2.png`.
+Download the layer 1 texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/models/armor/copper_layer_1.png) and save it to `src/main/resources/assets/tutorial/textures/model/armor/copper_layer_1.png`. Download the layer 2 texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/models/armor/copper_layer_2.png) and save it to `src/main/resources/assets/tutorial/textures/models/armor/copper_layer_2.png`.
 
 ## Armor Item Base Class
 Before we can begin creating armor items, we'll need to create a base class that implements our `ItemModelProvider` interface so it can be used with our registration helper method.
@@ -88,7 +88,7 @@ Next, we'll need to create a JSON model for our item. The file will be at `src/m
 }
 {% endhighlight %}
 
-You can download the copper helmet texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperHelmet.png) and save it to `src/main/resources/assets/tutorial/textures/items/copperHelmet.png`.
+You can download the copper helmet texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/copperHelmet.png) and save it to `src/main/resources/assets/tutorial/textures/items/copperHelmet.png`.
 
 Lastly, we'll need to add a localization entry for the helmet.
 
@@ -123,7 +123,7 @@ Next, we'll need to create a JSON model for our item. The file will be at `src/m
 }
 {% endhighlight %}
 
-You can download the copper helmet texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperChestplate.png) and save it to `src/main/resources/assets/tutorial/textures/items/copperChestplate.png`.
+You can download the copper helmet texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/copperChestplate.png) and save it to `src/main/resources/assets/tutorial/textures/items/copperChestplate.png`.
 
 Lastly, we'll need to add a localization entry for the helmet.
 
@@ -158,7 +158,7 @@ Next, we'll need to create a JSON model for our item. The file will be at `src/m
 }
 {% endhighlight %}
 
-You can download the copper helmet texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperLeggings.png) and save it to `src/main/resources/assets/tutorial/textures/items/copperLeggings.png`.
+You can download the copper helmet texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/copperLeggings.png) and save it to `src/main/resources/assets/tutorial/textures/items/copperLeggings.png`.
 
 Lastly, we'll need to add a localization entry for the leggings.
 
@@ -193,7 +193,7 @@ Next, we'll need to create a JSON model for our item. The file will be at `src/m
 }
 {% endhighlight %}
 
-You can download the copper helmet texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/master/src/main/resources/assets/tutorial/textures/items/copperBoots.png) and save it to `src/main/resources/assets/tutorial/textures/items/copperBoots.png`.
+You can download the copper helmet texture from [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.10.2/src/main/resources/assets/tutorial/textures/items/copperBoots.png) and save it to `src/main/resources/assets/tutorial/textures/items/copperBoots.png`.
 
 Lastly, we'll need to add a localization entry for the helmet.
 

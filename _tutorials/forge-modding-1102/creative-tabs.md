@@ -13,7 +13,7 @@ In this tutorial, we are going to create a custom creative tab that players can 
 First off, let's create our creative tab class. Create a class called `TutorialTab` that extends `CreativeTabs`. It will need a couple things:
 
 1. A no-args constructor that calls the super constructor with the correct label.
-2. An overriden `getTabIconItem` which returns the item to render as the icon.
+2. An overridden `getTabIconItem` which returns the item to render as the icon.
 
 The `String` passed into the super constructor is the label. The label is used to determine the localization key for the tab. For the label, we are going to pass in `TutorialMod.modId` so Minecraft uses our mod's ID to determine the localization key.
 

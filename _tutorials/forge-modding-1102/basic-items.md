@@ -49,7 +49,7 @@ Our `ItemBase` class will make it simpler to add basic items quickly. `ItemBase`
 - The unlocalized name is used for translating the name of the item into the currently active language.
 - The registry name is used when registering our item with Forge and should _never, ever change_.
 
-The `setCreativeTab` method is an overriden version that returns `ItemBase` instead of `Item` so we can use it in our `register` method without casting, as you'll see later.
+The `setCreativeTab` method is an overridden version that returns `ItemBase` instead of `Item` so we can use it in our `register` method without casting, as you'll see later.
 
 You will have an error because we haven't created the `registerItemRenderer` method yet, so let's do that now. In the `CommonProxy` class add a new method called `registerItemRenderer` that accepts an `Item`, an `int`, and a `String`.
 
@@ -58,7 +58,7 @@ public void registerItemRenderer(Item item, int meta, String id) {
 }
 {% endhighlight %}
 
-We'll leave this method empty, because it's in the common proxy so it can't access any client-only code, but it still needs to be here becuase `TutorialMod.proxy` is of type `CommonProxy` so any client-only methods still need to have an empty stub in the `CommonProxy`.
+We'll leave this method empty, because it's in the common proxy so it can't access any client-only code, but it still needs to be here because `TutorialMod.proxy` is of type `CommonProxy` so any client-only methods still need to have an empty stub in the `CommonProxy`.
 
 To our `ClientProxy` we'll add the actual implementation of `registerItemRenderer`:
 
@@ -131,6 +131,6 @@ This will:
 2. Set the creative tab to the Materials tab.
 3. Register our item with the `GameRegistry`.
 
-Now, if you load up the game and go into the Materials creative tab, you shoulds see our new copper ingot item (albeit without a model)! Next time we'll learn how to make basic JSON models and add a model to our copper ingot!
+Now, if you load up the game and go into the Materials creative tab, you should see our new copper ingot item (albeit without a model)! Next time we'll learn how to make basic JSON models and add a model to our copper ingot!
 
 ![Copper Ingot Item Screenshot](http://i.imgur.com/6uHudqH.png)
