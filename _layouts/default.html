@@ -6,13 +6,6 @@
 	<body>
 
 		<div id="nn-doa">
-		
-			<button id="nn-doa-close">
-				<svg viewBox="0 0 32 32" width="32" height="32" id="nn-doa-close-icon">
-					<path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
-					<path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
-				</svg>
-			</button>
 
 			<div id="nn-doa-content">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="nn-doa-icon">
@@ -28,7 +21,6 @@
 
 			<style>
 				#nn-doa {
-					display: none;
 					width: 100vw;
 					min-height: 100vh;
 					position: fixed;
@@ -142,20 +134,6 @@
 					}
 				}
 			</style>
-
-			<script>
-				"use strict";
-				(() => {
-					if (!localStorage.getItem("nn-doa")) {
-						const el = document.getElementById("nn-doa");
-						el.style.display = "block";
-						document.getElementById("nn-doa-close").onclick = () => {
-							el.style.display = "none";
-							localStorage.setItem("nn-doa", true);
-						};
-					}
-				})();
-			</script>
 		</div>
 
 		<div class="site">
