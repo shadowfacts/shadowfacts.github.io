@@ -143,8 +143,8 @@ public static class RegistrationHandler {
 	
 	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent event) {
-		ModItems.registerItemModels();
-		ModBlocks.registerItemModels();
+		ModItems.registerModels();
+		ModBlocks.registerModels();
 	}
 
 }
@@ -161,7 +161,7 @@ public class ModBlocks {
 	public static BlockOre oreCopper = new BlockOre("ore_copper").setCreativeTab(CreativeTabs.MATERIALS);
 
 	public static void register(IForgeRegistry<Block> registry) {
-		register.registerAll(
+		registery.registerAll(
 				oreCopper
 		);
 	}
