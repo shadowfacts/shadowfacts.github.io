@@ -89,6 +89,10 @@ body {
 			fill: $hackerGray;
 		}
 	}
+
+	&.icon-mastodon {
+		margin-right: 5px;
+	}
 }
 
 .chevron:before {
