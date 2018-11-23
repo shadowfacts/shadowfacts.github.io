@@ -30,7 +30,7 @@ public class TutorialMod {
 - `0.0F`: The toughness of the armor.
 
 Next we'll need the textures for the armor material that are used to render the on-player overlay.
-Download the layer 1 texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.12/src/main/resources/assets/tutorial/textures/models/armor/copper_layer_1.png) and save it to `src/main/resources/assets/tutorial/textures/model/armor/copper_layer_1.png`. Download the layer 2 texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.12/src/main/resources/assets/tutorial/textures/models/armor/copper_layer_2.png) and save it to `src/main/resources/assets/tutorial/textures/models/armor/copper_layer_2.png`.
+Download the layer 1 texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.12/src/main/resources/assets/tutorial/textures/models/armor/copper_layer_1.png) and save it to `src/main/resources/assets/tutorial/textures/models/armor/copper_layer_1.png`. Download the layer 2 texture [here](https://raw.githubusercontent.com/shadowfacts/TutorialMod/1.12/src/main/resources/assets/tutorial/textures/models/armor/copper_layer_2.png) and save it to `src/main/resources/assets/tutorial/textures/models/armor/copper_layer_2.png`.
 
 ## Armor Item Base Class
 Before we can begin creating armor items, we'll need to create a base class that implements our `ItemModelProvider` interface so it can be used with our registration helper method.
@@ -73,7 +73,7 @@ public class ModItems {
 	public static void register(IForgeRegistry<Item> registry) {
 		registry.registerAll(
 				// ...
-				copperHelemt
+				copperHelemet
 		);
 	}
 
